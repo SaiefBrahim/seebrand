@@ -112,8 +112,13 @@ const Header = () => {
         </div>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <Image src="https://placeimg.com/80/80/people" />
+            <div className="w-5">
+              <Image
+                src="/profilepic.png"
+                alt="profilepic"
+                width={40}
+                height={40}
+              />
             </div>
           </label>
           <ul

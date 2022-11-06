@@ -18,8 +18,8 @@ const Home = ({ data }) => {
         }}
       >
         <Header />
-        <div className=" flex flex-col mt-[7%] ml-[25%] gap-8">
-          <p className=" cursor-default w-72 lg:leading-snug text-white text-2xl md:text-3xl lg:text-[3.5rem] font-bold">
+        <div className=" flex flex-col mt-[2%] ml-[21%] gap-2 lg:mt-[6%] lg:gap-8 ">
+          <p className=" cursor-default text-white w-56 text-lg lg:w-72 lg:leading-snug md:text-2xl lg:text-[3.5rem] font-bold">
             Sale of the summer collection
           </p>
           <div className="flex items-center gap-4 cursor-pointer w-fit">
