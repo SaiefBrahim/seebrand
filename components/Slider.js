@@ -10,6 +10,8 @@ const Slider = () => {
       style={{
         backgroundImage: `url(${`/${bgImage}`})`,
         backgroundSize: "100%",
+        transition: "background-image 0.3s linear",
+        WebkitTransition: "background-image 0.3s linear",
       }}
     >
       <Header />
