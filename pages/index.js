@@ -37,7 +37,7 @@ const Home = ({ data }) => {
                 data-name="Ellipse 48"
                 fill="#fbb03b"
                 stroke="#fbb03b"
-                stroke-width="1.5"
+                strokeWidth="1.5"
               >
                 <circle cx="19.5" cy="19.5" r="19.5" stroke="none" />
                 <circle cx="19.5" cy="19.5" r="18.75" fill="none" />
