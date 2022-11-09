@@ -44,7 +44,12 @@ const Slider = () => {
             bgImageHandler();
           }}
         >
-          <Image src="/leftarrow.webp" width={100} height={87} />
+          <Image
+            src="/leftarrow.webp"
+            width={100}
+            height={87}
+            alt="Back button"
+          />
         </button>
         <button
           className=" w-9 lg:w-12 btn btn-primary p-3 bg-white border-none rounded-none"
@@ -52,7 +57,12 @@ const Slider = () => {
             bgImageHandler();
           }}
         >
-          <Image src="/rightarrow.webp" width={100} height={87} />
+          <Image
+            src="/rightarrow.webp"
+            width={100}
+            height={87}
+            alt="Next button"
+          />
         </button>
       </div>
       <div className=" flex mt-6 py-6 lg:py-0 lg:mt-0 lg:flex-row lg:justify-around lg:w-[70%] lg:rounded-tr-full lg:h-[18%] lg:absolute lg:top-[82vh] bg-white">
@@ -83,7 +93,7 @@ const Slider = () => {
             <div>
               <h3 className=" font-medium text-sm">Originality Guaranteed</h3>
               <p className=" w-52 text-gray-700 text-xs">
-                Our clients' opinions speak for themselves
+                Our clients&apos; opinions speak for themselves
               </p>
             </div>
           </div>
