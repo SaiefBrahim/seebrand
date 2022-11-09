@@ -37,9 +37,9 @@ const Slider = () => {
           </p>
         </button>
       </div>
-      <div className=" flex justify-end absolute top-36 right-10 lg:static lg:mt-32 lg:mr-24 ">
+      <div className=" flex justify-end absolute top-36 right-10 lg:static lg:mt-32 lg:mr-24 lg:gap-3">
         <button
-          className=" w-9 lg:w-12 btn btn-ghost p-1 bg-gray-600 bg-opacity-20"
+          className=" w-9 lg:w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
           onClick={() => {
             bgImageHandler();
           }}
@@ -47,7 +47,7 @@ const Slider = () => {
           <Image src="/leftarrow.webp" width={100} height={87} />
         </button>
         <button
-          className=" w-9 lg:w-12 btn btn-ghost p-1"
+          className=" w-9 lg:w-12 btn btn-primary p-3 bg-white border-none rounded-none"
           onClick={() => {
             bgImageHandler();
           }}
@@ -55,6 +55,54 @@ const Slider = () => {
           <Image src="/rightarrow.webp" width={100} height={87} />
         </button>
       </div>
+      <div className=" hidden lg:flex justify-around w-[70%] rounded-tr-full h-[18%] absolute top-[82vh] bg-white">
+        <div className=" ml-10 flex items-center  gap-4">
+          <Image
+            className=" w-12 h-12"
+            src="/freeshipping.webp"
+            alt="Free Shipping"
+            width={156}
+            height={156}
+          />
+          <div>
+            <h3 className=" font-medium">Free Shipping</h3>
+            <p className=" w-52 text-gray-700 text-sm">
+              On purchases over $199
+            </p>
+          </div>
+        </div>
+        <div className=" flex items-center gap-4">
+          <Image
+            className=" w-12 h-12"
+            src="/satisfiedcustomers.webp"
+            alt="99% Satisfied Customers"
+            width={156}
+            height={156}
+          />
+          <div className=" flex flex-col">
+            <h3 className=" font-medium">Originality Guaranteed</h3>
+            <p className=" w-52 text-gray-700 text-sm">
+              Our clients' opinions speak for themselves
+            </p>
+          </div>
+        </div>
+        <div className=" mr-10 flex items-center gap-4">
+          <Image
+            className=" w-12 h-12"
+            src="/moneybackwarranty.webp"
+            alt="Money Back Warranty"
+            width={156}
+            height={156}
+          />
+          <div>
+            <h3 className=" font-medium">99% Satisfied Customers</h3>
+            <p className=" w-52 text-gray-700 text-sm">
+              30 days warranty for each product from our store
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className=" h-96"></div>
     </div>
   );
 };
