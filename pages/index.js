@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Announcements from "../components/Announcements";
 import Slider from "../components/Slider";
 
 const Home = () => {
@@ -11,6 +12,9 @@ const Home = () => {
       </Head>
       <div>
         <Slider />
+        <div className=" mx-10 lg:mx-24">
+          <Announcements />
+        </div>
       </div>
     </div>
   );

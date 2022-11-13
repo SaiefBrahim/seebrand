@@ -11,7 +11,7 @@ const Slider = () => {
   };
   return (
     <div
-      className=" h-screen bg-no-repeat lg:h-screen lg:bg-no-repeat"
+      className="bg-no-repeat lg:h-screen"
       style={{
         backgroundImage: `url(${`/${bgImage}`})`,
         backgroundSize: "100%",
@@ -20,11 +20,11 @@ const Slider = () => {
       }}
     >
       <Header />
-      <div className=" flex flex-col mt-[2%] ml-[21%] gap-4 lg:mt-[6%] lg:gap-8 ">
+      <div className="h-32 lg:h-fit flex flex-col mt-[2%] ml-[21%] gap-4 lg:mt-[6%] lg:gap-8 ">
         <p className=" cursor-default text-white w-56 text-lg lg:w-72 lg:leading-snug md:text-2xl lg:text-[3.5rem] font-bold">
           Sale of the summer collection
         </p>
-        <button className="flex items-center gap-2 lg:gap-3 cursor-pointer w-fit">
+        <button className=" flex items-center gap-3 cursor-pointer w-fit">
           <Image
             className=" w-6 lg:w-10"
             src="/shopnowbutton.webp"
@@ -32,12 +32,10 @@ const Slider = () => {
             height={156}
             alt="Shop Now"
           />
-          <p className=" text-white font-medium text-xs lg:text-base">
-            SHOP NOW
-          </p>
+          <p className=" text-white font-medium text-base">SHOP NOW</p>
         </button>
       </div>
-      <div className=" flex justify-end absolute top-36 right-10 lg:static lg:mt-32 lg:mr-24 lg:gap-3">
+      <div className=" hidden lg:flex justify-end top-36 right-10 static mt-32 mr-24">
         <button
           className=" w-9 lg:w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
           onClick={() => {
@@ -65,8 +63,8 @@ const Slider = () => {
           />
         </button>
       </div>
-      <div className=" flex mt-6 py-6 lg:py-0 lg:mt-0 lg:flex-row lg:justify-around lg:w-[70%] lg:rounded-tr-full lg:h-[18%] lg:absolute lg:top-[82vh] bg-white">
-        <div className=" flex flex-col gap-6 lg:flex-row items-center w-full h-full">
+      <div className=" hidden lg:flex mt-6 py-6 lg:py-0 lg:mt-0 lg:justify-around lg:w-[70%] lg:rounded-tr-full lg:h-[18%] lg:absolute lg:top-[82vh] bg-white">
+        <div className=" flex flex-col gap-6 lg:flex-row items-center w-full">
           <div className=" lg:ml-12 flex gap-4">
             <Image
               className=" w-12 h-12"
@@ -114,7 +112,6 @@ const Slider = () => {
           </div>
         </div>
       </div>
-      <div className=" h-96"></div>
     </div>
   );
 };
