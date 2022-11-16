@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Announcements from "../components/Announcements";
+import ProductsSlider from "../components/ProductsSlider";
 import Slider from "../components/Slider";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         <Slider />
         <div className=" mx-10 lg:mx-28">
           <Announcements />
+          <ProductsSlider />
         </div>
       </div>
     </div>
