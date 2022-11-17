@@ -12,6 +12,7 @@ const Slider = () => {
   return (
     <>
       <div
+        priority="true"
         className="hidden lg:block bg-no-repeat lg:h-screen"
         style={{
           backgroundImage: `url(${`/${bgImage}`})`,
@@ -120,6 +121,7 @@ const Slider = () => {
         <Header />
         <div
           className="h-[500px] bg-no-repeat"
+          priority="true"
           style={{
             backgroundImage: `url(${`/mobilecover.webp`})`,
             backgroundSize: "100%",

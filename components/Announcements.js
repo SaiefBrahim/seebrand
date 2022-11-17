@@ -8,6 +8,7 @@ const Announcements = () => {
           alt="New Arrivals"
           width={608}
           height={373}
+          priority={true}
         />
         <p className=" absolute top-36 left-12 text-3xl text-white font-normal w-44">
           New arrivals are now in!
@@ -22,6 +23,7 @@ const Announcements = () => {
           alt="New Arrivals"
           width={302}
           height={373}
+          priority={true}
         />
         <p className=" absolute top-36 left-12 text-2xl text-white font-normal w-44">
           Basic t-shirts 29.99 TND
@@ -36,6 +38,7 @@ const Announcements = () => {
           alt="New Arrivals"
           width={302}
           height={373}
+          priority={true}
         />
         <span className="btn btn-disabled min-h-0 h-10 absolute top-20 left-12 rounded-3xl bg-red-600 text-white">
           {" "}
