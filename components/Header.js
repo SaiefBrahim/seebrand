@@ -1,4 +1,14 @@
+import { useEffect } from "react";
+
 const Header = () => {
+  const handleScroll = () => {
+    console.log(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   return (
     <>
       <div className="hidden lg:flex navbar bg-transparent">
@@ -150,7 +160,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="lg:hidden">
+
+      {/* mobile header */}
+
+      <div className="lg:hidden fixed top-0 w-full">
         <div className="w-full navbar bg-white">
           <div className=" mx-2 px-2 normal-case font-medium text-xl ">
             SeeBrand
