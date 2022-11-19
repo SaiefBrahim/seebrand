@@ -41,7 +41,6 @@ const Announcements = () => {
           priority={true}
         />
         <span className="btn btn-disabled min-h-0 h-10 absolute top-20 left-12 rounded-3xl bg-red-600 text-white">
-          {" "}
           -50%
         </span>
         <p className=" absolute top-36 left-12 text-2xl text-white font-normal w-44">

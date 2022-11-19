@@ -93,6 +93,7 @@ const ProductsSlider = () => {
               alt="New Arrivals"
               width={608}
               height={373}
+              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -107,6 +108,7 @@ const ProductsSlider = () => {
               alt="New Arrivals"
               width={608}
               height={373}
+              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -121,6 +123,7 @@ const ProductsSlider = () => {
               alt="New Arrivals"
               width={608}
               height={373}
+              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -135,6 +138,7 @@ const ProductsSlider = () => {
               alt="New Arrivals"
               width={608}
               height={373}
+              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -149,6 +153,7 @@ const ProductsSlider = () => {
               alt="New Arrivals"
               width={608}
               height={373}
+              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -163,6 +168,7 @@ const ProductsSlider = () => {
               alt="New Arrivals"
               width={608}
               height={373}
+              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -177,6 +183,7 @@ const ProductsSlider = () => {
               alt="New Arrivals"
               width={608}
               height={373}
+              priority={false}
             />
           </figure>
           <div className="card-body px-1">

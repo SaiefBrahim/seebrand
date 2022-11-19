@@ -13,7 +13,7 @@ const Slider = () => {
     <>
       <div
         priority="true"
-        className="hidden lg:block bg-no-repeat lg:h-screen"
+        className="hidden lg:block bg-no-repeat lg:h-screen relative"
         style={{
           backgroundImage: `url(${`/${bgImage}`})`,
           backgroundSize: "100%",
