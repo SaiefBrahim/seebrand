@@ -1,14 +1,4 @@
-import { useEffect } from "react";
-
 const Header = () => {
-  const handleScroll = () => {
-    console.log(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
   return (
     <>
       <div className="hidden lg:flex navbar bg-transparent">
