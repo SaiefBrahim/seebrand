@@ -12,7 +12,6 @@ const Slider = () => {
   return (
     <>
       <div
-        priority="true"
         className="hidden lg:block bg-no-repeat lg:h-screen relative"
         style={{
           backgroundImage: `url(${`/${bgImage}`})`,
@@ -22,8 +21,8 @@ const Slider = () => {
         }}
       >
         <Header />
-        <div className="h-32 lg:h-fit flex flex-col mt-[2%] ml-[21%] gap-4 lg:mt-[6%] lg:gap-8 ">
-          <p className=" cursor-default text-white w-56 text-lg lg:w-72 lg:leading-snug md:text-2xl lg:text-[3.5rem] font-bold">
+        <div className="h-32 lg:h-fit flex flex-col ml-[21%] gap-4 lg:mt-0 lg:gap-8 ">
+          <p className=" cursor-default text-white mt-[2%] lg:mt-[12%] w-56 text-lg lg:w-72 lg:leading-snug md:text-2xl lg:text-[3.5rem] font-bold">
             Sale of the summer collection
           </p>
           <button className=" flex items-center gap-3 cursor-pointer w-fit">
@@ -121,7 +120,6 @@ const Slider = () => {
         <Header />
         <div
           className="h-[500px] bg-no-repeat"
-          priority="true"
           style={{
             backgroundImage: `url(${`/mobilecover.webp`})`,
             backgroundSize: "100%",

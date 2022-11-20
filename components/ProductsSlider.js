@@ -7,7 +7,7 @@ const ProductsSlider = () => {
   const NArrow = ({ onClick }) => {
     return (
       <button
-        className=" w-10 lg:w-12 btn btn-primary p-3 border-none bg-transparent bg-opacity-20 h-10 lg:h-12 rounded-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -right-[52px] lg:-right-12"
+        className=" w-10 btn btn-primary p-3 border-none bg-transparent bg-opacity-20 h-10  rounded-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -right-[50px] lg:-right-16"
         onClick={onClick}
       >
         <Image
@@ -23,7 +23,7 @@ const ProductsSlider = () => {
   const PArrow = ({ onClick }) => {
     return (
       <button
-        className=" w-10 lg:w-12 btn btn-primary bg-transparent h-10 lg:h-12 bg-opacity-20 rounded-none p-3 border-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -left-[52px] lg:-left-12"
+        className=" w-10 btn btn-primary bg-transparent h-10 bg-opacity-20 rounded-none p-3 border-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -left-[50px] lg:-left-16"
         onClick={onClick}
       >
         <Image
@@ -41,7 +41,7 @@ const ProductsSlider = () => {
     speed: 250,
     nextArrow: <NArrow />,
     prevArrow: <PArrow />,
-    slidesToShow: 4.3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
@@ -49,7 +49,6 @@ const ProductsSlider = () => {
     cssEase: "linear",
     swipeToSlide: true,
     speed: 300,
-    centerMode: true,
 
     responsive: [
       {
@@ -78,22 +77,21 @@ const ProductsSlider = () => {
     ],
   };
   return (
-    <div className="mt-9 lg:mt-12">
+    <div>
       <div className=" flex justify-between items-center mb-9 lg:mb-12">
         <h1 className=" text-lg w-28 lg:w-full">Selected just for you</h1>
         <button className=" btn btn-primary bg-transparent rounded-3xl border-gray-800 min-h-0 h-10 font-medium">
           Show more
         </button>
       </div>
-      <Slider className="mx-[22px] lg:mx-0" {...settings}>
-        <div className="card card-compact bg-base-100 shadow-2xl rounded-none">
+      <Slider className=" mx-5 lg:-mx-5" {...settings}>
+        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
           <figure>
             <Image
               src="/announcements/announcement3.webp"
               alt="New Arrivals"
               width={608}
               height={373}
-              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -101,14 +99,13 @@ const ProductsSlider = () => {
             <h2 className="card-title">89 TND</h2>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-2xl rounded-none">
+        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
           <figure>
             <Image
               src="/announcements/announcement3.webp"
               alt="New Arrivals"
               width={608}
               height={373}
-              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -116,14 +113,13 @@ const ProductsSlider = () => {
             <h2 className="card-title">89 TND</h2>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-2xl rounded-none">
+        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
           <figure>
             <Image
               src="/announcements/announcement3.webp"
               alt="New Arrivals"
               width={608}
               height={373}
-              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -131,14 +127,13 @@ const ProductsSlider = () => {
             <h2 className="card-title">89 TND</h2>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-2xl rounded-none">
+        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
           <figure>
             <Image
               src="/announcements/announcement3.webp"
               alt="New Arrivals"
               width={608}
               height={373}
-              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -146,14 +141,13 @@ const ProductsSlider = () => {
             <h2 className="card-title">89 TND</h2>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-2xl rounded-none">
+        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
           <figure>
             <Image
               src="/announcements/announcement3.webp"
               alt="New Arrivals"
               width={608}
               height={373}
-              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -161,14 +155,13 @@ const ProductsSlider = () => {
             <h2 className="card-title">89 TND</h2>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-2xl rounded-none">
+        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
           <figure>
             <Image
               src="/announcements/announcement3.webp"
               alt="New Arrivals"
               width={608}
               height={373}
-              priority={false}
             />
           </figure>
           <div className="card-body px-1">
@@ -176,14 +169,13 @@ const ProductsSlider = () => {
             <h2 className="card-title">89 TND</h2>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-2xl rounded-none">
+        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
           <figure>
             <Image
               src="/announcements/announcement3.webp"
               alt="New Arrivals"
               width={608}
               height={373}
-              priority={false}
             />
           </figure>
           <div className="card-body px-1">

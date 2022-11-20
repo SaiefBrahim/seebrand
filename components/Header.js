@@ -1,13 +1,28 @@
+import { useState, useEffect } from "react";
 const Header = () => {
+  const [navScroll, setNavScroll] = useState("bg-transparent");
+  const handleScroll = () => {
+    if (window.scrollY) {
+      setNavScroll("bg-black");
+    } else setNavScroll("bg-transparent");
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   return (
     <>
-      <div className="hidden lg:flex navbar bg-transparent">
+      <div
+        className={`hidden lg:flex navbar fixed z-50 transition-colors duration-300 ${navScroll}`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost text-white lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
+                width={20}
+                height={20}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -55,6 +70,8 @@ const Header = () => {
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">
             <svg
+              width={20}
+              height={20}
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 text-white"
               fill="none"
@@ -78,6 +95,8 @@ const Header = () => {
               >
                 <div className="indicator">
                   <svg
+                    width={20}
+                    height={20}
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
                     fill="none"
@@ -116,11 +135,11 @@ const Header = () => {
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-5">
                 <svg
+                  width={20}
+                  height={20}
                   id="noun_avatar_2102861_2_"
                   data-name="noun_avatar_2102861 (2)"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="19"
-                  height="19"
                   viewBox="0 0 19 19"
                 >
                   <path
@@ -153,7 +172,7 @@ const Header = () => {
 
       {/* mobile header */}
 
-      <div className="lg:hidden fixed top-0 w-full">
+      <div className="lg:hidden fixed top-0 w-full z-50">
         <div className="w-full navbar bg-white">
           <div className=" mx-2 px-2 normal-case font-medium text-xl ">
             SeeBrand
@@ -161,6 +180,8 @@ const Header = () => {
           <div className="navbar-end w-full">
             <button className="btn btn-ghost btn-circle">
               <svg
+                width={20}
+                height={20}
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
                 fill="none"
@@ -181,6 +202,8 @@ const Header = () => {
                 <label tabIndex={0} className="btn btn-ghost btn-circle">
                   <div className="indicator">
                     <svg
+                      width={20}
+                      height={20}
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
                       fill="none"
@@ -218,6 +241,8 @@ const Header = () => {
 
             <label className="btn btn-ghost btn-circle">
               <svg
+                width={20}
+                height={20}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
