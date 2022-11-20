@@ -42,8 +42,8 @@ const Chooseus = () => {
           />
           <h2 className=" text-base">Money-Back Guarantee</h2>
           <p>
-            If an item arrived damaged or you've changed your mind, you can send
-            it back for a full refund.
+            If an item arrived damaged or you&apos;ve changed your mind, you can
+            send it back for a full refund.
           </p>
         </div>
         <div className=" flex flex-col items-center gap-4 text-center text-xs">
