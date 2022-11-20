@@ -3,6 +3,7 @@ import Announcements from "../components/Announcements";
 import Chooseus from "../components/Chooseus";
 import ProductsSlider from "../components/ProductsSlider";
 import Slider from "../components/Slider";
+import Todaypicks from "../components/Todaypicks";
 
 const Home = () => {
   return (
@@ -14,10 +15,12 @@ const Home = () => {
       </Head>
       <div>
         <Slider />
-        <div className=" mt-8 lg:mt-14 mx-10 lg:mx-28 flex flex-col gap-8">
+        <div className=" mt-8 lg:mt-14 mx-10 lg:mx-28 flex flex-col gap-10">
           <Announcements />
           <ProductsSlider />
-          <Chooseus />
+          <Chooseus view="hidden lg:flex" />
+          <Todaypicks />
+          <Chooseus view="flex lg:hidden" />
         </div>
       </div>
     </div>
