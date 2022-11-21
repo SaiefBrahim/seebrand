@@ -8,8 +8,8 @@ const Chooseus = ({ view }) => {
   const [onChoose4, setOnChoose4] = useState(false);
 
   return (
-    <div className={`${view} flex-col items-center gap-16 mt-8`}>
-      <h1>Why should you choose us?</h1>
+    <div className={`${view} flex-col items-center gap-16 mt-12`}>
+      <h1 className=" text-xl">Why should you choose us?</h1>
       <div className=" flex flex-col lg:flex-row gap-8">
         <div
           className=" flex flex-col items-center gap-4 text-center text-xs text-gray-600"
@@ -25,7 +25,7 @@ const Chooseus = ({ view }) => {
               className={`${onChoose1} rounded-full w-12 h-12 bg-gray-200 absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75 w-auto h-auto"
+              className=" scale-75"
               src="/chooseus/shipping.webp"
               width={80}
               height={52.25}
@@ -52,7 +52,7 @@ const Chooseus = ({ view }) => {
               className={`${onChoose2} rounded-full w-12 h-12 bg-gray-200 flex absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75 w-auto h-auto"
+              className=" scale-75"
               src="/chooseus/payments.webp"
               width={59}
               height={59}
@@ -78,7 +78,7 @@ const Chooseus = ({ view }) => {
               className={`${onChoose3} rounded-full w-12 h-12 bg-gray-200  flex absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75 w-auto h-auto"
+              className=" scale-75"
               src="/chooseus/warranty.webp"
               width={49.26}
               height={52}
@@ -105,7 +105,7 @@ const Chooseus = ({ view }) => {
               className={`${onChoose4} rounded-full w-12 h-12 flex bg-gray-200 absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75 w-auto h-auto"
+              className=" scale-75"
               src="/chooseus/materials.webp"
               width={57.33}
               height={58}
