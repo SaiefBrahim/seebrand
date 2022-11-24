@@ -12,7 +12,7 @@ const Chooseus = ({ view }) => {
       <h1 className=" text-xl">Why should you choose us?</h1>
       <div className=" flex flex-col lg:flex-row gap-8">
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-600"
+          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose1("bg-primary");
           }}
@@ -39,7 +39,7 @@ const Chooseus = ({ view }) => {
           </p>
         </div>
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-600"
+          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose2("bg-primary");
           }}
@@ -65,7 +65,7 @@ const Chooseus = ({ view }) => {
           </p>
         </div>
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-600"
+          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose3("bg-primary");
           }}
@@ -92,7 +92,7 @@ const Chooseus = ({ view }) => {
           </p>
         </div>
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-600"
+          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose4("bg-primary");
           }}

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Announcements from "../components/Announcements";
 import Chooseus from "../components/Chooseus";
+import Footerinfo from "../components/Footerinfo";
 import Newsletter from "../components/Newsletter";
 import ProductsSlider from "../components/ProductsSlider";
 import Slider from "../components/Slider";
@@ -22,8 +23,9 @@ const Home = () => {
           <Chooseus view="hidden lg:flex" />
           <Todaypicks />
           <Chooseus view="flex lg:hidden" />
-          <Newsletter />
         </div>
+        <Newsletter />
+        <Footerinfo />
       </div>
     </div>
   );
