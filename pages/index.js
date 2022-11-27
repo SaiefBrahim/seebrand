@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Announcements from "../components/Announcements";
 import Chooseus from "../components/Chooseus";
+import Footer from "../components/Footer";
 import Footerinfo from "../components/Footerinfo";
 import Newsletter from "../components/Newsletter";
 import ProductsSlider from "../components/ProductsSlider";
@@ -26,6 +27,7 @@ const Home = () => {
         </div>
         <Newsletter />
         <Footerinfo />
+        <Footer />
       </div>
     </div>
   );

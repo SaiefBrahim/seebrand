@@ -79,8 +79,10 @@ const ProductsSlider = () => {
   return (
     <div>
       <div className=" flex justify-between items-center mb-9 lg:mb-12">
-        <h1 className=" text-lg w-28 lg:w-full">Selected just for you</h1>
-        <button className=" btn btn-primary bg-transparent rounded-3xl border-gray-800 min-h-0 h-10 font-medium">
+        <h1 className=" text-xl lg:text-2xl font-medium w-28 lg:w-full">
+          Selected just for you
+        </h1>
+        <button className=" btn btn-primary bg-transparent rounded-3xl border-gray-800 min-h-0 h-11">
           Show more
         </button>
       </div>

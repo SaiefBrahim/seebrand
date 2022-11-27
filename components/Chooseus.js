@@ -1,5 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
+import Shipping from "../public/chooseus/shipping.webp";
+import Payments from "../public/chooseus/payments.webp";
+import Warranty from "../public/chooseus/warranty.webp";
+import Materials from "../public/chooseus/materials.webp";
 
 const Chooseus = ({ view }) => {
   const [onChoose1, setOnChoose1] = useState("bg-gray-200");
@@ -9,10 +13,12 @@ const Chooseus = ({ view }) => {
 
   return (
     <div className={`${view} flex-col items-center gap-16 mt-12`}>
-      <h1 className=" text-xl">Why should you choose us?</h1>
+      <h1 className=" text-xl lg:text-2xl font-medium">
+        Why should you choose us?
+      </h1>
       <div className=" flex flex-col lg:flex-row gap-8">
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
+          className=" flex flex-col items-center gap-4 text-center text-sm text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose1("bg-primary");
           }}
@@ -25,10 +31,8 @@ const Chooseus = ({ view }) => {
               className={`${onChoose1} rounded-full w-12 h-12 bg-gray-200 absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75"
-              src="/chooseus/shipping.webp"
-              width={80}
-              height={52.25}
+              className=" h-12 w-full relative"
+              src={Shipping}
               alt="Free Shipping"
             />
           </div>
@@ -39,7 +43,7 @@ const Chooseus = ({ view }) => {
           </p>
         </div>
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
+          className=" flex flex-col items-center gap-4 text-center text-sm text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose2("bg-primary");
           }}
@@ -52,10 +56,8 @@ const Chooseus = ({ view }) => {
               className={`${onChoose2} rounded-full w-12 h-12 bg-gray-200 flex absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75"
-              src="/chooseus/payments.webp"
-              width={59}
-              height={59}
+              className=" h-12 w-full relative"
+              src={Payments}
               alt="Easy Payments"
             />
           </div>
@@ -65,7 +67,7 @@ const Chooseus = ({ view }) => {
           </p>
         </div>
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
+          className=" flex flex-col items-center gap-4 text-center text-sm text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose3("bg-primary");
           }}
@@ -78,10 +80,8 @@ const Chooseus = ({ view }) => {
               className={`${onChoose3} rounded-full w-12 h-12 bg-gray-200  flex absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75"
-              src="/chooseus/warranty.webp"
-              width={49.26}
-              height={52}
+              className=" h-12 w-full relative"
+              src={Warranty}
               alt="Money-Back Guarantee"
             />
           </div>
@@ -92,7 +92,7 @@ const Chooseus = ({ view }) => {
           </p>
         </div>
         <div
-          className=" flex flex-col items-center gap-4 text-center text-xs text-gray-500"
+          className=" flex flex-col items-center gap-4 text-center text-sm text-gray-500"
           onMouseEnter={(e) => {
             setOnChoose4("bg-primary");
           }}
@@ -105,10 +105,8 @@ const Chooseus = ({ view }) => {
               className={`${onChoose4} rounded-full w-12 h-12 flex bg-gray-200 absolute -top-3 -right-5`}
             ></span>
             <Image
-              className=" scale-75"
-              src="/chooseus/materials.webp"
-              width={57.33}
-              height={58}
+              className=" h-12 w-full relative"
+              src={Materials}
               alt="Finest Quality"
             />
           </div>
