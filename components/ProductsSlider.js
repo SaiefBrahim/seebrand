@@ -7,6 +7,7 @@ const ProductsSlider = () => {
   const NArrow = ({ onClick }) => {
     return (
       <button
+        aria-label="Next Item"
         className=" w-10 btn btn-primary p-3 border-none bg-transparent bg-opacity-20 h-10  rounded-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -right-[50px] lg:-right-16"
         onClick={onClick}
       >
@@ -23,6 +24,7 @@ const ProductsSlider = () => {
   const PArrow = ({ onClick }) => {
     return (
       <button
+        aria-label="Previous Button"
         className=" w-10 btn btn-primary bg-transparent h-10 bg-opacity-20 rounded-none p-3 border-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -left-[50px] lg:-left-16"
         onClick={onClick}
       >
@@ -82,7 +84,10 @@ const ProductsSlider = () => {
         <h1 className=" text-xl lg:text-2xl font-medium w-28 lg:w-full">
           Selected just for you
         </h1>
-        <button className=" btn btn-primary bg-transparent rounded-3xl border-gray-800 min-h-0 h-11">
+        <button
+          aria-label="Show More"
+          className=" btn btn-primary bg-transparent rounded-3xl border-gray-800 min-h-0 h-11"
+        >
           Show more
         </button>
       </div>

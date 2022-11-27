@@ -16,7 +16,10 @@ const Newsletter = () => {
           placeholder="Your Email"
           type="email"
         />
-        <button className=" btn btn-primary rounded-3xl min-h-0 h-12 px-5">
+        <button
+          aria-label="Email Subscribe"
+          className=" btn btn-primary rounded-3xl min-h-0 h-12 px-5"
+        >
           Subscribe
         </button>
       </div>

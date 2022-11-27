@@ -15,39 +15,59 @@ const Footerinfo = () => {
           SEEBRAND designs clothing for the young, the old & everyone in between
           – but most importantly, for the fashionable
         </p>
-        <div className=" flex flex-row gap-2 lg:gap-8 items-center">
-          <Link href="https://facebook.com/seedevs" target="_blank">
+        <div className=" flex flex-row gap-3 lg:gap-8 items-center">
+          <Link
+            className="w-12 h-12 flex items-center justify-center"
+            href="https://facebook.com/seedevs"
+            target="_blank"
+          >
             <Image
-              className=" scale-[0.5] lg:scale-[0.6] "
+              className=" scale-[0.7] "
               src={Facebook}
               alt="Facebook Page Seedevs"
             />
           </Link>
-          <Link href="https://linkedin.com/seedevs" target="_blank">
+          <Link
+            className="w-12 h-12 flex items-center justify-center"
+            href="https://linkedin.com/seedevs"
+            target="_blank"
+          >
             <Image
-              className=" scale-[0.6]"
+              className=" scale-[0.7]"
               src={Linkedin}
               alt="Linkedin Page Seedevs"
             />
           </Link>
-          <Link href="https://instagram.com/seedevs" target="_blank">
+          <Link
+            className="w-12 h-12 flex items-center justify-center"
+            href="https://instagram.com/seedevs"
+            target="_blank"
+          >
             <Image
-              className=" scale-[0.6]"
+              className=" scale-[0.7]"
               src={Instagram}
               alt="Instagram Page Seedevs"
             />
           </Link>
-          <Link href="https://twitter.com/seedevs" target="_blank">
+          <Link
+            className="w-12 h-12 flex items-center justify-center"
+            href="https://twitter.com/seedevs"
+            target="_blank"
+          >
             <Image
-              className=" scale-[0.6]"
+              className=" scale-[0.7]"
               src={Twitter}
               alt="Twitter Page Seedevs"
             />
           </Link>
 
-          <Link href="https://youtube.com/seedevs" target="_blank">
+          <Link
+            className="w-12 h-12 flex items-center justify-center"
+            href="https://youtube.com/seedevs"
+            target="_blank"
+          >
             <Image
-              className=" scale-[0.6]"
+              className=" scale-[0.7]"
               src={Youtube}
               alt="Youtube Channel Seedevs"
             />

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState, useEffect } from "react";
 const Header = () => {
   const [navScroll, setNavScroll] = useState("bg-transparent");
@@ -23,18 +24,18 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0 text-white  text-lg">
             <li>
-              <a>Men</a>
+              <Link href="#">Men</Link>
             </li>
             <li>
-              <a>Women</a>
+              <Link href="#">Women</Link>
             </li>
             <li>
-              <a>Kid</a>
+              <Link href="#">Kid</Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle">
+          <button aria-label="Search" className="btn btn-ghost btn-circle">
             <svg
               width={20}
               height={20}
@@ -89,7 +90,10 @@ const Header = () => {
                   <span className="font-bold text-lg">8 Items</span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
+                    <button
+                      aria-label="View Cart"
+                      className="btn btn-primary btn-block"
+                    >
                       View cart
                     </button>
                   </div>
@@ -126,10 +130,10 @@ const Header = () => {
                 <a className="justify-between">Profile</a>
               </li>
               <li>
-                <a>Settings</a>
+                <Link href="#">Settings</Link>
               </li>
               <li>
-                <a>Logout</a>
+                <Link href="#">Logout</Link>
               </li>
             </ul>
           </div>
@@ -144,7 +148,7 @@ const Header = () => {
             SeeBrand
           </div>
           <div className="navbar-end w-full">
-            <button className="btn btn-ghost btn-circle">
+            <button aria-label="Search" className="btn btn-ghost btn-circle">
               <svg
                 width={20}
                 height={20}
@@ -196,7 +200,10 @@ const Header = () => {
                     <span className="font-bold text-lg">8 Items</span>
                     <span className="text-info">Subtotal: $999</span>
                     <div className="card-actions">
-                      <button className="btn btn-primary btn-block">
+                      <button
+                        aria-label="View Cart"
+                        className="btn btn-primary btn-block"
+                      >
                         View cart
                       </button>
                     </div>

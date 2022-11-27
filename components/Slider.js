@@ -25,7 +25,10 @@ const Slider = () => {
           <p className=" cursor-default text-white mt-[2%] lg:mt-[12%] w-56 text-lg lg:w-72 lg:leading-snug md:text-2xl lg:text-[3.5rem] font-bold">
             Sale of the summer collection
           </p>
-          <button className=" flex items-center gap-3 cursor-pointer w-fit">
+          <button
+            aria-label="Shop Now"
+            className=" flex items-center gap-3 cursor-pointer w-fit"
+          >
             <Image
               className=" w-6 lg:w-10"
               src="/shopnowbutton.webp"
@@ -38,6 +41,7 @@ const Slider = () => {
         </div>
         <div className=" lg:flex justify-end top-36 right-10 static mt-32 mr-24">
           <button
+            aria-label="Previous Slider"
             className=" w-9 lg:w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
             onClick={() => {
               bgImageHandler();
@@ -51,6 +55,7 @@ const Slider = () => {
             />
           </button>
           <button
+            aria-label="Next Slider"
             className=" w-9 lg:w-12 btn btn-primary p-3 bg-white border-none rounded-none"
             onClick={() => {
               bgImageHandler();
@@ -75,7 +80,7 @@ const Slider = () => {
                 height={156}
               />
               <div>
-                <h3 className=" font-medium text-sm">Free Shipping</h3>
+                <h1 className=" font-medium text-sm">Free Shipping</h1>
                 <p className=" w-52 text-gray-700 text-xs">
                   On purchases over 199 TND
                 </p>
@@ -90,7 +95,7 @@ const Slider = () => {
                 height={156}
               />
               <div>
-                <h3 className=" font-medium text-sm">Originality Guaranteed</h3>
+                <h1 className=" font-medium text-sm">Originality Guaranteed</h1>
                 <p className=" w-52 text-gray-700 text-xs">
                   Our clients&apos; opinions speak for themselves
                 </p>
@@ -105,9 +110,9 @@ const Slider = () => {
                 height={156}
               />
               <div>
-                <h3 className=" font-medium text-sm">
+                <h1 className=" font-medium text-sm">
                   99% Satisfied Customers
-                </h3>
+                </h1>
                 <p className=" w-52 text-gray-700 text-xs">
                   30 days warranty for each product from our store
                 </p>
@@ -131,7 +136,10 @@ const Slider = () => {
             <p className=" cursor-default text-white w-56 text-4xl font-bold">
               Sale of the summer collection
             </p>
-            <button className=" flex items-center gap-3 cursor-pointer w-fit">
+            <button
+              aria-label="Shop Now"
+              className=" flex items-center gap-3 cursor-pointer w-fit"
+            >
               <Image
                 className=" w-9"
                 src="/shopnowbutton.webp"

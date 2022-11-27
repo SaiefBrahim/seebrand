@@ -10,7 +10,7 @@ import Todaypicks from "../components/Todaypicks";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>SeeBrand - Get Fashionated</title>
         <meta name="description" content="Home Page" />
@@ -29,7 +29,7 @@ const Home = () => {
         <Footerinfo />
         <Footer />
       </div>
-    </div>
+    </>
   );
 };
 export default Home;

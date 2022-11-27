@@ -12,7 +12,10 @@ const Announcements = () => {
         <p className=" absolute top-36 left-12 text-3xl text-white font-normal w-44">
           New arrivals are now in!
         </p>
-        <button className=" absolute top-60 left-12 w-40 text-xs btn btn-primary rounded-3xl bg-white border-none">
+        <button
+          aria-label="Show Collection"
+          className=" absolute top-60 left-12 w-40 text-xs btn btn-primary rounded-3xl bg-white border-none"
+        >
           SHOW COLLECTION
         </button>
       </div>
@@ -26,7 +29,10 @@ const Announcements = () => {
         <p className=" absolute top-36 left-12 text-2xl text-white font-normal w-44">
           Basic t-shirts 29.99 TND
         </p>
-        <button className=" absolute top-60 left-12 px-6 text-xs btn btn-primary rounded-3xl bg-white border-none">
+        <button
+          aria-label="More Details"
+          className=" absolute top-60 left-12 px-6 text-xs btn btn-primary rounded-3xl bg-white border-none"
+        >
           MORE DETAILS
         </button>
       </div>
@@ -43,7 +49,10 @@ const Announcements = () => {
         <p className=" absolute top-36 left-12 text-2xl text-white font-normal w-44">
           Sale this summer
         </p>
-        <button className=" absolute top-60 left-12 px-6 text-xs btn btn-primary rounded-3xl bg-white border-none">
+        <button
+          aria-label="View All"
+          className=" absolute top-60 left-12 px-6 text-xs btn btn-primary rounded-3xl bg-white border-none"
+        >
           VIEW ALL
         </button>
       </div>
