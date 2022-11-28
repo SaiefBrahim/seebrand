@@ -2,6 +2,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 const Header = () => {
   const [navScroll, setNavScroll] = useState("bg-transparent");
+  const [toggle, setToggle] = useState("hidden");
+  const handleToggle = () => {
+    toggle === "hidden" ? setToggle("flex") : setToggle("hidden");
+  };
   const handleScroll = () => {
     if (window.scrollY) {
       setNavScroll("bg-black");
@@ -22,9 +26,36 @@ const Header = () => {
           </h1>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0 text-white  text-lg">
-            <li>
-              <Link href="#">Men</Link>
+          <ul className="menu menu-horizontal p-0 text-white hover">
+            <li
+              className=" menu"
+              onMouseEnter={() => {
+                handleToggle();
+              }}
+              onMouseLeave={() => {
+                handleToggle();
+              }}
+            >
+              <span>
+                <Link href="#">Men</Link>
+              </span>
+              <ul
+                className={`${toggle} bg-white text-black grid grid-cols-4 w-max`}
+              >
+                <li className=" flex flex-col">
+                  <Link href="#">Clothing</Link>
+                </li>
+                <li className=" flex flex-col">
+                  <Link href="#">Shoes</Link>
+                </li>
+                <li className=" flex flex-col">
+                  <Link href="#">Accessories</Link>
+                </li>
+
+                <li className=" flex flex-col">
+                  <Link href="#">Sale</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link href="#">Women</Link>
