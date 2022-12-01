@@ -26,9 +26,9 @@ const Header = () => {
           </h1>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0 text-white hover">
+          <ul className="menu menu-horizontal p-0 text-white hover text-center">
             <li
-              className=" menu"
+              className=" relative"
               onMouseEnter={() => {
                 handleToggle();
               }}
@@ -36,24 +36,73 @@ const Header = () => {
                 handleToggle();
               }}
             >
-              <span>
-                <Link href="#">Men</Link>
-              </span>
+              <Link href="#">Men</Link>
+
               <ul
-                className={`${toggle} bg-white text-black grid grid-cols-4 w-max`}
+                className={` ${toggle} bg-white text-black grid grid-cols-4 w-max text-center absolute top-[100%] -left-80 p-4 `}
               >
                 <li className=" flex flex-col">
-                  <Link href="#">Clothing</Link>
+                  <Link className=" font-semibold" href="#">
+                    Clothing
+                  </Link>
+                  <ul>
+                    <li>
+                      <Link className="" href="#">
+                        Casual
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">Freestyle</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Running</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hiking</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Boots</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Trainers</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li className=" flex flex-col">
-                  <Link href="#">Shoes</Link>
+                  <Link className=" font-semibold" href="#">
+                    Shoes
+                  </Link>
+                  <ul>
+                    <li>
+                      <Link href="#">Jeans</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Sweetshirts and Hoodies</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Tracksuit</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jacket and Coats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">T-shirts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Shorts</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li className=" flex flex-col">
-                  <Link href="#">Accessories</Link>
+                  <Link className=" font-semibold" href="#">
+                    Accessories
+                  </Link>
                 </li>
 
                 <li className=" flex flex-col">
-                  <Link href="#">Sale</Link>
+                  <Link className=" font-semibold" href="#">
+                    Sale
+                  </Link>
                 </li>
               </ul>
             </li>
