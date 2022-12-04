@@ -14,3 +14,45 @@ body {
     margin: 0 20px;
   }
 }
+.megamenu::before {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 100%;
+  border-width: 20px;
+  top: -3.5%;
+  z-index: 1;
+}
+.megamenumen::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 2.6%;
+  border-width: 2px;
+  border-color: #fbb23c;
+  top: -4.5%;
+  left: 43%;
+  z-index: 10;
+}
+.megamenuwomen::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 4%;
+  border-width: 2px;
+  border-color: orange;
+  top: -4.5%;
+  left: 47.8%;
+  z-index: 10;
+}
+.megamenukid::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 2%;
+  border-width: 2px;
+  border-color: orange;
+  top: -4.5%;
+  left: 54%;
+  z-index: 10;
+}

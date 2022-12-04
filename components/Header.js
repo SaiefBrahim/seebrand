@@ -2,9 +2,24 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 const Header = () => {
   const [navScroll, setNavScroll] = useState("bg-transparent");
-  const [toggle, setToggle] = useState("hidden");
-  const handleToggle = () => {
-    toggle === "hidden" ? setToggle("flex") : setToggle("hidden");
+  const [toggle1, setToggle1] = useState("invisible opacity-0");
+  const [toggle2, setToggle2] = useState("invisible opacity-0");
+  const [toggle3, setToggle3] = useState("invisible opacity-0");
+
+  const handleToggle1 = () => {
+    toggle1 === "invisible opacity-0"
+      ? setToggle1("visible opacity-100")
+      : setToggle1("invisible opacity-0");
+  };
+  const handleToggle2 = () => {
+    toggle2 === "invisible opacity-0"
+      ? setToggle2("visible opacity-100")
+      : setToggle2("invisible opacity-0");
+  };
+  const handleToggle3 = () => {
+    toggle3 === "invisible opacity-0"
+      ? setToggle3("visible opacity-100")
+      : setToggle3("invisible opacity-0");
   };
   const handleScroll = () => {
     if (window.scrollY) {
@@ -26,26 +41,63 @@ const Header = () => {
           </h1>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0 text-white hover text-center">
+          <ul className="flex flex-row p-0 text-white">
             <li
-              className=" relative"
               onMouseEnter={() => {
-                handleToggle();
+                handleToggle1();
               }}
               onMouseLeave={() => {
-                handleToggle();
+                handleToggle1();
               }}
             >
-              <Link href="#">Men</Link>
+              <Link className="py-4 px-4" href="#">
+                Men
+              </Link>
 
               <ul
-                className={` ${toggle} bg-white text-black grid grid-cols-4 w-max text-center absolute top-[100%] -left-80 p-4 `}
+                className={` ${toggle1} megamenumen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-screen absolute top-[100%] p-16 megamenu left-0`}
               >
-                <li className=" flex flex-col">
-                  <Link className=" font-semibold" href="#">
-                    Clothing
+                <ul className=" font-medium flex flex-col gap-6">
+                  <li>
+                    <Link href="#">Sale</Link>
+                  </li>
+                  <li>
+                    <Link href="#">BestSellers</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Latest Arrivals</Link>
+                  </li>
+                </ul>
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    CLOTHING
                   </Link>
-                  <ul>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Jeans</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Sweetshirts and Hoodies</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Tracksuit</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jacket and Coats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">T-shirts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Shorts</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    SHOES
+                  </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
                     <li>
                       <Link className="" href="#">
                         Casual
@@ -68,11 +120,94 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-                <li className=" flex flex-col">
-                  <Link className=" font-semibold" href="#">
-                    Shoes
+
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    ACCESSORIES
                   </Link>
-                  <ul>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Caps</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jewellery</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Bags</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Belts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Socks</Link>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    SALE
+                  </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Caps</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jewellery</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Bags</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Belts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Socks</Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li
+              onMouseEnter={() => {
+                handleToggle2();
+              }}
+              onMouseLeave={() => {
+                handleToggle2();
+              }}
+            >
+              <Link className="py-4 px-4" href="#">
+                Women
+              </Link>
+
+              <ul
+                className={` ${toggle2} megamenuwomen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-screen absolute megamenu top-[100%] p-16 left-0  `}
+              >
+                <ul className=" font-medium flex flex-col gap-6">
+                  <li>
+                    <Link href="#">Sale</Link>
+                  </li>
+                  <li>
+                    <Link href="#">BestSellers</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Latest Arrivals</Link>
+                  </li>
+                </ul>
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    CLOTHING
+                  </Link>
+                  <ul className="font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Trousers</Link>
+                    </li>
                     <li>
                       <Link href="#">Jeans</Link>
                     </li>
@@ -80,37 +215,223 @@ const Header = () => {
                       <Link href="#">Sweetshirts and Hoodies</Link>
                     </li>
                     <li>
-                      <Link href="#">Tracksuit</Link>
+                      <Link href="#">Jackets</Link>
                     </li>
                     <li>
-                      <Link href="#">Jacket and Coats</Link>
+                      <Link href="#">Blazers</Link>
                     </li>
                     <li>
-                      <Link href="#">T-shirts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Shorts</Link>
+                      <Link href="#">Tops & Bodysuits</Link>
                     </li>
                   </ul>
                 </li>
-                <li className=" flex flex-col">
-                  <Link className=" font-semibold" href="#">
-                    Accessories
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    SHOES
                   </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Casual</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Freestyle</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Running</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hiking</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Boots</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Trainers</Link>
+                    </li>
+                  </ul>
                 </li>
 
-                <li className=" flex flex-col">
-                  <Link className=" font-semibold" href="#">
-                    Sale
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    ACCESSORIES
                   </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Caps</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jewellery</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Bags</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Belts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Socks</Link>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    SALE
+                  </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Caps</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jewellery</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Bags</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Belts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Socks</Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
-            <li>
-              <Link href="#">Women</Link>
-            </li>
-            <li>
-              <Link href="#">Kid</Link>
+            <li
+              onMouseEnter={() => {
+                handleToggle3();
+              }}
+              onMouseLeave={() => {
+                handleToggle3();
+              }}
+            >
+              <Link className="py-4 px-4" href="#">
+                Kid
+              </Link>
+              <ul
+                className={` ${toggle3} megamenukid grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-screen absolute megamenu top-[100%] p-16 left-0  `}
+              >
+                <ul className=" font-medium flex flex-col gap-6">
+                  <li>
+                    <Link href="#">Sale</Link>
+                  </li>
+                  <li>
+                    <Link href="#">BestSellers</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Latest Arrivals</Link>
+                  </li>
+                </ul>
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    CLOTHING
+                  </Link>
+                  <ul className="font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Trousers</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jeans</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Sweetshirts and Hoodies</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jackets</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Blazers</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Tops & Bodysuits</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    SHOES
+                  </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Casual</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Freestyle</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Running</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hiking</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Boots</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Trainers</Link>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    ACCESSORIES
+                  </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Caps</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jewellery</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Bags</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Belts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Socks</Link>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className=" flex flex-col gap-6">
+                  <Link className=" font-medium" href="#">
+                    SALE
+                  </Link>
+                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
+                    <li>
+                      <Link href="#">Caps</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Jewellery</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Bags</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Hats</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Belts</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Socks</Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -167,7 +488,7 @@ const Header = () => {
                 className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
               >
                 <div className="card-body">
-                  <span className="font-bold text-lg">8 Items</span>
+                  <span className="font-medium text-lg">8 Items</span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
                     <button
@@ -277,7 +598,7 @@ const Header = () => {
                   className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
                 >
                   <div className="card-body">
-                    <span className="font-bold text-lg">8 Items</span>
+                    <span className="font-medium text-lg">8 Items</span>
                     <span className="text-info">Subtotal: $999</span>
                     <div className="card-actions">
                       <button
