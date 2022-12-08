@@ -5,6 +5,7 @@ const Header = () => {
   const [toggle1, setToggle1] = useState("invisible opacity-0");
   const [toggle2, setToggle2] = useState("invisible opacity-0");
   const [toggle3, setToggle3] = useState("invisible opacity-0");
+  const [connected, setConnected] = useState(false);
 
   const handleToggle1 = () => {
     toggle1 === "invisible opacity-0"
@@ -32,6 +33,8 @@ const Header = () => {
   });
   return (
     <>
+      {/* desktop view */}
+      {/* logo */}
       <div
         className={`hidden lg:flex navbar fixed z-50 transition-colors duration-300 ${navScroll}`}
       >
@@ -40,7 +43,8 @@ const Header = () => {
             SeeBrand
           </h1>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        {/* mega menu */}
+        <div className="navbar-center flex">
           <ul className="flex flex-row p-0 text-white">
             <li
               onMouseEnter={() => {
@@ -435,26 +439,37 @@ const Header = () => {
             </li>
           </ul>
         </div>
+        {/* end mega menu */}
         <div className="navbar-end">
-          <button aria-label="Search" className="btn btn-ghost btn-circle">
-            <svg
-              width={20}
-              height={20}
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
-
+          {/* search bar */}
+          <div className="Hotbg hover:btn-ghost">
+            <input
+              type="text"
+              name=""
+              className="Hotbg-txt placeholder:text-white placeholder:opacity-75"
+              placeholder="Search ..."
+            />
+            <button className="Hotbg-btn">
+              <svg
+                width={20}
+                height={20}
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+          {/* end search bar */}
+          {/* cart */}
           <div className="flex-none">
             <div className="dropdown dropdown-end">
               <label
@@ -485,7 +500,7 @@ const Header = () => {
               </label>
               <div
                 tabIndex={0}
-                className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
+                className="mt-3 card card-compact dropdown-content w-52 shadow bg-gray-50"
               >
                 <div className="card-body">
                   <span className="font-medium text-lg">8 Items</span>
@@ -493,7 +508,7 @@ const Header = () => {
                   <div className="card-actions">
                     <button
                       aria-label="View Cart"
-                      className="btn btn-primary btn-block"
+                      className="btn btn-primary text-white btn-block"
                     >
                       View cart
                     </button>
@@ -502,6 +517,8 @@ const Header = () => {
               </div>
             </div>
           </div>
+          {/* end cart  */}
+          {/* account menu */}
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-5">
@@ -525,19 +542,39 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+              className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-gray-50 rounded-box w-48"
             >
-              <li>
-                <Link href="#">Profile</Link>
-              </li>
-              <li>
-                <Link href="#">Settings</Link>
-              </li>
-              <li>
-                <Link href="#">Logout</Link>
-              </li>
+              {connected ? (
+                <>
+                  <li>
+                    <Link href="#">Profile</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Whishlist</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Settings</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Logout</Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link href="#">Whishlist</Link>
+                  </li>
+                  <li>
+                    <Link href="/account/signup">Signup</Link>
+                  </li>
+                  <li>
+                    <Link href="/account/login">Login</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
+          {/* end account menu */}
         </div>
       </div>
 
