@@ -454,7 +454,7 @@ const Header = ({ bgColor, pos }) => {
               className="Hotbg-txt placeholder:text-white placeholder:opacity-75"
               placeholder="Search ..."
             />
-            <button className="Hotbg-btn">
+            <button aria-label="Search" className="Hotbg-btn">
               <svg
                 width={20}
                 height={20}
@@ -569,13 +569,13 @@ const Header = ({ bgColor, pos }) => {
               ) : (
                 <>
                   <li>
-                    <Link href="#">Whishlist</Link>
+                    <Link href="/wishlist">Wishlist</Link>
                   </li>
                   <li>
-                    <Link href="/account/signup">Signup</Link>
+                    <Link href="/signup">Signup</Link>
                   </li>
                   <li>
-                    <Link href="/account/login">Login</Link>
+                    <Link href="/login">Login</Link>
                   </li>
                 </>
               )}

@@ -6,24 +6,23 @@ const login = () => {
         <title>SeeBrand - Login</title>
         <meta name="Login SeeBrand" content="Login Page" />
       </Head>
-      <div className="flex justify-center">
+      <div className="flex justify-center my-12">
         <div className="card flex w-full justify-center max-w-sm">
+          <h1 className=" text-xl font-medium text-center">Login</h1>
           <div className="card-body">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
+            <div className="form-control mb-2">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="input"
+                className="input input-bordered bg-white rounded-3xl"
               />
             </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input type="password" placeholder="Password" className="input" />
+              <input
+                type="password"
+                placeholder="Password"
+                className="input input-bordered bg-white rounded-3xl"
+              />
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
@@ -31,7 +30,7 @@ const login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary rounded-3xl">Sign in</button>
             </div>
           </div>
         </div>
