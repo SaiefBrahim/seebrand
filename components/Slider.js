@@ -20,7 +20,6 @@ const Slider = () => {
           WebkitTransition: "background-image 0.3s linear",
         }}
       >
-        <Header />
         <div className="h-32 lg:h-fit flex flex-col ml-[21%] gap-4 lg:mt-0 lg:gap-8 ">
           <p className=" cursor-default text-white mt-[2%] lg:mt-[12%] w-56 text-lg lg:w-72 lg:leading-snug md:text-2xl lg:text-[3.5rem] font-bold">
             Sale of the summer collection
@@ -122,7 +121,6 @@ const Slider = () => {
         </div>
       </div>
       <div className=" lg:hidden">
-        <Header />
         <div
           className="h-[500px] bg-no-repeat"
           style={{

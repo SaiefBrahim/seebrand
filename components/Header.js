@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
-const Header = () => {
+const Header = ({ bgColor, pos }) => {
   const [navScroll, setNavScroll] = useState("bg-transparent");
   const [toggle1, setToggle1] = useState("invisible opacity-0");
   const [toggle2, setToggle2] = useState("invisible opacity-0");
@@ -36,12 +36,17 @@ const Header = () => {
       {/* desktop view */}
       {/* logo */}
       <div
-        className={`hidden lg:flex navbar fixed z-50 transition-colors duration-300 ${navScroll}`}
+        className={`hidden lg:flex navbar ${pos} z-50 transition-colors duration-300 ${
+          bgColor ? bgColor : navScroll
+        }`}
       >
         <div className="navbar-start">
-          <h1 className="btn btn-ghost normal-case text-2xl text-white">
+          <Link
+            href="/"
+            className="btn btn-ghost normal-case text-2xl text-white"
+          >
             SeeBrand
-          </h1>
+          </Link>
         </div>
         {/* mega menu */}
         <div className="navbar-center flex">
@@ -59,7 +64,7 @@ const Header = () => {
               </Link>
 
               <ul
-                className={` ${toggle1} megamenumen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-screen absolute top-[100%] p-16 megamenu left-0`}
+                className={` ${toggle1} megamenumen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-full absolute top-[100%] p-16 megamenu left-0`}
               >
                 <ul className=" font-medium flex flex-col gap-6">
                   <li>
@@ -191,7 +196,7 @@ const Header = () => {
               </Link>
 
               <ul
-                className={` ${toggle2} megamenuwomen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-screen absolute megamenu top-[100%] p-16 left-0  `}
+                className={` ${toggle2} megamenuwomen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-full absolute megamenu top-[100%] p-16 left-0  `}
               >
                 <ul className=" font-medium flex flex-col gap-6">
                   <li>
@@ -320,7 +325,7 @@ const Header = () => {
                 Kid
               </Link>
               <ul
-                className={` ${toggle3} megamenukid grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-screen absolute megamenu top-[100%] p-16 left-0  `}
+                className={` ${toggle3} megamenukid grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-full absolute megamenu top-[100%] p-16 left-0  `}
               >
                 <ul className=" font-medium flex flex-col gap-6">
                   <li>
@@ -503,12 +508,14 @@ const Header = () => {
                 className="mt-3 card card-compact dropdown-content w-52 shadow bg-gray-50"
               >
                 <div className="card-body">
-                  <span className="font-medium text-lg">8 Items</span>
+                  <span className="font-medium text-lg text-black">
+                    8 Items
+                  </span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
                     <button
                       aria-label="View Cart"
-                      className="btn btn-primary text-white btn-block"
+                      className="btn btn-primary text-black btn-block"
                     >
                       View cart
                     </button>
@@ -519,7 +526,7 @@ const Header = () => {
           </div>
           {/* end cart  */}
           {/* account menu */}
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end text-black">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-5">
                 <svg

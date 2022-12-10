@@ -8,7 +8,7 @@ import Youtube from "../public/social/youtube.webp";
 
 const Footerinfo = () => {
   return (
-    <div className=" flex flex-col justify-center lg:grid lg:grid-cols-6 gap-10 lg:gap-8 mx-10 lg:mx-28 mt-12">
+    <footer className=" flex flex-col justify-center lg:grid lg:grid-cols-6 gap-10 lg:gap-8 mx-10 lg:mx-28 mt-12">
       <div className=" col-span-3 flex flex-col gap-8 lg:gap-12 w-full lg:w-[80%]">
         <h1 className=" text-2xl font-semibold m-0">SEEBRAND</h1>
         <p className=" text-base text-gray-500">
@@ -128,7 +128,7 @@ const Footerinfo = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

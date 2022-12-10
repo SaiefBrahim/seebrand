@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className=" flex flex-col gap-6 mt-6 h-20 justify-center text-center">
+    <footer className=" flex flex-col gap-6 mt-6 h-20 justify-center text-center">
       <hr className="h-[1.5px] bg-gray-300" />
       <p className=" text-xs lg:text-sm text-gray-500">
         &copy; 2022{" "}
@@ -19,7 +19,7 @@ const Footer = () => {
         </Link>
         , ALL RIGHTS ARE RESERVED.
       </p>
-    </div>
+    </footer>
   );
 };
 
