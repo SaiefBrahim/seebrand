@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-const login = () => {
+const Login = () => {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
   return (
     <>
@@ -198,4 +198,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
