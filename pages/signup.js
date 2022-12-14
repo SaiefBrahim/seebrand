@@ -140,7 +140,7 @@ const signup = () => {
             </div>
             <div className=" flex justify-evenly w-full text-xs mt-2">
               <span>Already member?</span>
-              <Link href="/signup" className=" link link-hover">
+              <Link href="/login" className=" link link-hover">
                 Sign in
               </Link>
             </div>

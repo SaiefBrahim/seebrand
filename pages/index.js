@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Announcements from "../components/Announcements";
-import Chooseus from "../components/Chooseus";
-import Newsletter from "../components/Newsletter";
-import ProductsSlider from "../components/ProductsSlider";
-import Slider from "../components/Slider";
-import Todaypicks from "../components/Todaypicks";
+import Announcements from "../components/home/Announcements";
+import Chooseus from "../components/home/Chooseus";
+import Newsletter from "../components/home/Newsletter";
+import ProductsSlider from "../components/home/ProductsSlider";
+import Slider from "../components/home/Slider";
+import Todaypicks from "../components/home/Todaypicks";
 
 const Home = () => {
   return (

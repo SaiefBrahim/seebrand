@@ -1,7 +1,7 @@
 import "../styles/globals.css";
-import Header from "../components/Header";
-import Footerinfo from "../components/Footerinfo";
-import Footer from "../components/Footer";
+import Header from "../components/home/Header";
+import Footerinfo from "../components/home/Footerinfo";
+import Footer from "../components/home/Footer";
 import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

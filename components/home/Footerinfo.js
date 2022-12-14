@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import Facebook from "../public/social/facebook.webp";
-import Instagram from "../public/social/instagram.webp";
-import Linkedin from "../public/social/linkedin.webp";
-import Twitter from "../public/social/twitter.webp";
-import Youtube from "../public/social/youtube.webp";
+import Facebook from "../../public/social/facebook.webp";
+import Instagram from "../../public/social/instagram.webp";
+import Linkedin from "../../public/social/linkedin.webp";
+import Twitter from "../../public/social/twitter.webp";
+import Youtube from "../../public/social/youtube.webp";
 
 const Footerinfo = () => {
   return (

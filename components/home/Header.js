@@ -6,6 +6,7 @@ const Header = ({ bgColor, pos }) => {
   const [toggle2, setToggle2] = useState("invisible opacity-0");
   const [toggle3, setToggle3] = useState("invisible opacity-0");
   const [connected, setConnected] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleToggle1 = () => {
     toggle1 === "invisible opacity-0"
@@ -656,24 +657,42 @@ const Header = ({ bgColor, pos }) => {
                 </div>
               </div>
             </div>
-
-            <label className="btn btn-ghost btn-circle">
-              <svg
-                width={20}
-                height={20}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
+            <div className="dropdown dropdown-end ">
+              <label
+                tabIndex={0}
+                className="btn btn-ghost btn-circle backdrop-blur-3xl"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
+                <svg
+                  width={20}
+                  height={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block w-6 h-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-gray-50 w-64 absolute top-14 -left-[12.5rem] h-screen"
+              >
+                <li>
+                  <Link href="#">Item 1</Link>
+                </li>
+                <li>
+                  <Link href="#">Item 2</Link>
+                </li>
+                <li>
+                  <Link href="#">Item 3</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

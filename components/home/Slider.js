@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useState } from "react";
-import Header from "../components/Header";
 
 const Slider = () => {
   const [bgImage, setBgImage] = useState("coverpic.webp");

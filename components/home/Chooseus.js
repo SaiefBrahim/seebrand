@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
-import Shipping from "../public/chooseus/shipping.webp";
-import Payments from "../public/chooseus/payments.webp";
-import Warranty from "../public/chooseus/warranty.webp";
-import Materials from "../public/chooseus/materials.webp";
+import Shipping from "../../public/chooseus/shipping.webp";
+import Payments from "../../public/chooseus/payments.webp";
+import Warranty from "../../public/chooseus/warranty.webp";
+import Materials from "../../public/chooseus/materials.webp";
 
 const Chooseus = ({ view }) => {
   const [onChoose1, setOnChoose1] = useState("bg-gray-200");
