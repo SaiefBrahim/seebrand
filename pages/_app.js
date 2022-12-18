@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header
-        bgColor={router.pathname !== "/" ? "bg-black" : null}
+        bgColor={router.pathname !== "/" ? "bg-black" : undefined}
         pos={router.pathname !== "/" ? "relative" : "fixed"}
       />
       <Component {...pageProps} />

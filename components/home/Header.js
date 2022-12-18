@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 const Header = ({ bgColor, pos }) => {
   const [navScroll, setNavScroll] = useState("bg-transparent");
@@ -6,7 +7,14 @@ const Header = ({ bgColor, pos }) => {
   const [toggle2, setToggle2] = useState("invisible opacity-0");
   const [toggle3, setToggle3] = useState("invisible opacity-0");
   const [connected, setConnected] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
+  const handleSideBar = () => {
+    const router = useRouter;
+    setShowSidebar(!showSidebar);
+    showSidebar
+      ? (document.body.style.overflow = "visible")
+      : (document.body.style.overflow = "hidden");
+  };
 
   const handleToggle1 = () => {
     toggle1 === "invisible opacity-0"
@@ -587,7 +595,6 @@ const Header = ({ bgColor, pos }) => {
       </div>
 
       {/* mobile header */}
-
       <div className="lg:hidden fixed top-0 w-full z-50">
         <div className="w-full navbar bg-white">
           <div className=" mx-2 px-2 normal-case font-medium text-xl ">
@@ -657,42 +664,88 @@ const Header = ({ bgColor, pos }) => {
                 </div>
               </div>
             </div>
-            <div className="dropdown dropdown-end ">
-              <label
-                tabIndex={0}
-                className="btn btn-ghost btn-circle backdrop-blur-3xl"
-              >
-                <svg
-                  width={20}
-                  height={20}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="inline-block w-6 h-6 stroke-current"
+            {/* side bar */}
+            <>
+              {showSidebar ? (
+                <label
+                  className="btn btn-ghost btn-circle z-50"
+                  onClick={() => handleSideBar()}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
-              </label>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu bg-gray-50 w-64 absolute top-14 -left-[12.5rem] h-screen"
+                  <svg
+                    width={20}
+                    height={20}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="w-6 h-6 stroke-current"
+                  >
+                    <path
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </label>
+              ) : (
+                <label
+                  className="btn btn-ghost btn-circle"
+                  onClick={() => handleSideBar()}
+                >
+                  <svg
+                    width={20}
+                    height={20}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="w-6 h-6 stroke-current"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </label>
+              )}
+              <div
+                className={`top-0 right-0 w-full overflow-auto pt-12 bg-white text-black fixed h-full z-40 ease-in-out duration-150 ${
+                  showSidebar ? "translate-x-0 " : "translate-x-full"
+                }`}
               >
-                <li>
-                  <Link href="#">Item 1</Link>
-                </li>
-                <li>
-                  <Link href="#">Item 2</Link>
-                </li>
-                <li>
-                  <Link href="#">Item 3</Link>
-                </li>
-              </ul>
-            </div>
+                <ul className="menu w-screen max-w-none text-lg items-center list-item">
+                  <li>
+                    <Link
+                      href="/"
+                      onClick={() => {
+                        router.push("/");
+                      }}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">Men</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Women</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Kid</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Wishlist</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Signup</Link>
+                  </li>
+                  <li>
+                    <Link href="#">Login</Link>
+                  </li>
+                </ul>
+              </div>
+            </>
           </div>
         </div>
       </div>
