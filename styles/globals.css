@@ -102,3 +102,23 @@ body {
   width: 0px;
 }
 /* end search bar */
+.anchor-style {
+  display: flex;
+  flex-direction: column;
+}
+
+.anchor-style > a {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 500;
+}
+.anchor-style > a:hover {
+  background-color: #fbb23c;
+}
+.anchor-style > a:last-child {
+  background-color: #fbb23c;
+}

@@ -714,36 +714,22 @@ const Header = ({ bgColor, pos }) => {
                   showSidebar ? "translate-x-0 " : "translate-x-full"
                 }`}
               >
-                <ul className="menu w-screen max-w-none text-lg items-center list-item">
-                  <li>
-                    <Link
-                      href="/"
-                      onClick={() => {
-                        router.push("/");
-                      }}
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#">Men</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Women</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Kid</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Wishlist</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Signup</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Login</Link>
-                  </li>
-                </ul>
+                <div className="menu w-screen max-w-none text-lg anchor-style">
+                  <Link
+                    href="/"
+                    onClick={() => {
+                      router.push("/");
+                    }}
+                  >
+                    Home
+                  </Link>
+                  <Link href="#">Men</Link>
+                  <Link href="#">Women</Link>
+                  <Link href="#">Kid</Link>
+                  <Link href="#">Wishlist</Link>
+                  <Link href="#">Signup</Link>
+                  <Link href="#">Login</Link>
+                </div>
               </div>
             </>
           </div>
