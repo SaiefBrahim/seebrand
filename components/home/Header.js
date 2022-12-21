@@ -667,26 +667,27 @@ const Header = ({ bgColor, pos }) => {
             {/* side bar */}
             <>
               {showSidebar ? (
-                <label
-                  className="btn btn-ghost btn-circle z-50"
+                <div
+                  className=" btn btn-ghost z-50 flex gap-4 items-center -mr-2 -mt-4 pb-9 pt-7 pl-8"
                   onClick={() => handleSideBar()}
                 >
+                  <h1 className=" font-semibold">Close Menus</h1>
                   <svg
                     width={20}
                     height={20}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    className="w-6 h-6 stroke-current"
+                    className="w-6 h-6 stroke-current mr-0"
                   >
                     <path
-                      strokeWidth="1.5"
+                      strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                </label>
+                </div>
               ) : (
                 <label
                   className="btn btn-ghost btn-circle"
@@ -710,7 +711,7 @@ const Header = ({ bgColor, pos }) => {
                 </label>
               )}
               <div
-                className={`top-0 right-0 w-full overflow-auto pt-12 bg-white text-black fixed h-full z-40 ease-in-out duration-150 ${
+                className={` top-0 right-0 w-full overflow-auto pt-16 bg-white text-black fixed h-full z-40 ease-in-out duration-150 ${
                   showSidebar ? "translate-x-0 " : "translate-x-full"
                 }`}
               >

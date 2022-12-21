@@ -111,14 +111,13 @@ body {
   display: flex;
   justify-content: center;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   width: 100%;
   padding: 0.75rem;
-  font-weight: 500;
 }
 .anchor-style > a:hover {
   background-color: #fbb23c;
 }
 .anchor-style > a:last-child {
-  background-color: #fbb23c;
+  font-weight: 500;
 }
