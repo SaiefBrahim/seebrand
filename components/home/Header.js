@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 const Header = ({ bgColor, pos }) => {
   const [navScroll, setNavScroll] = useState("bg-transparent");
   const [toggle1, setToggle1] = useState("invisible opacity-0");
   const [toggle2, setToggle2] = useState("invisible opacity-0");
   const [toggle3, setToggle3] = useState("invisible opacity-0");
+  const [toggleSearch, setToggleSearch] = useState(false);
   const [connected, setConnected] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+  const ref = useRef();
   const handleSideBar = () => {
     const router = useRouter;
     setShowSidebar(!showSidebar);
@@ -35,6 +37,10 @@ const Header = ({ bgColor, pos }) => {
     if (window.scrollY) {
       setNavScroll("bg-black");
     } else setNavScroll("bg-transparent");
+  };
+  const handleSearchMobile = () => {
+    setToggleSearch(!toggleSearch);
+    ref.current.focus();
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -600,8 +606,14 @@ const Header = ({ bgColor, pos }) => {
           <div className=" mx-2 px-2 normal-case font-medium text-xl ">
             SeeBrand
           </div>
-          <div className="navbar-end w-full">
-            <button aria-label="Search" className="btn btn-ghost btn-circle">
+          <div className="navbar-end w-full relative">
+            <button
+              aria-label="Search"
+              className="btn btn-ghost btn-circle"
+              onClick={() => {
+                handleSearchMobile();
+              }}
+            >
               <svg
                 width={20}
                 height={20}
@@ -619,7 +631,18 @@ const Header = ({ bgColor, pos }) => {
                 />
               </svg>
             </button>
-
+            <div
+              className={`${
+                toggleSearch ? "visible" : "invisible"
+              } ease-in-out duration-150 absolute w-screen top-[3.5rem] -right-2`}
+            >
+              <input
+                ref={ref}
+                type="text"
+                placeholder="Search"
+                className="input bg border-0 focus:outline-0 rounded-none w-full"
+              />
+            </div>
             <div className="flex-none">
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -711,7 +734,7 @@ const Header = ({ bgColor, pos }) => {
                 </label>
               )}
               <div
-                className={` top-0 right-0 w-full overflow-auto pt-16 bg-white text-black fixed h-full z-40 ease-in-out duration-150 ${
+                className={` top-0 right-0 w-full overflow-auto pt-16 bg-white text-black fixed h-full z-40 ease-in-out transition-all duration-150 ${
                   showSidebar ? "translate-x-0 " : "translate-x-full"
                 }`}
               >
