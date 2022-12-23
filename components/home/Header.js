@@ -40,11 +40,15 @@ const Header = ({ bgColor, pos }) => {
   };
   const handleSearchMobile = () => {
     setToggleSearch(!toggleSearch);
-    ref.current.focus();
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  });
+  useEffect(() => {
+    if (toggleSearch) {
+      ref.current.focus();
+    }
   });
   return (
     <>
@@ -640,7 +644,10 @@ const Header = ({ bgColor, pos }) => {
                 ref={ref}
                 type="text"
                 placeholder="Search"
-                className="input bg border-0 focus:outline-0 rounded-none w-full"
+                className={`${
+                  toggleSearch ? "visible" : "invisible"
+                } input bg border-0 focus:outline-0 rounded-none w-full`}
+                autoFocus
               />
             </div>
             <div className="flex-none">
