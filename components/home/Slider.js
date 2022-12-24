@@ -1,19 +1,42 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Slider = () => {
-  const [bgImage, setBgImage] = useState("coverpic.webp");
-  const bgImageHandler = () => {
-    bgImage === "coverpic.webp"
-      ? setBgImage("coverpic2.webp")
-      : setBgImage("coverpic.webp");
+  const [bgImage, setBgImage] = useState(0);
+  const [bgMobile, setBgMobile] = useState(0);
+
+  const slides = ["coverpic.webp", "coverpic2.webp"];
+  const mobileSlides = [
+    "mobileslide1.webp",
+    "mobileslide2.webp",
+    "mobileslide3.webp",
+  ];
+  const nextSlideHandler = () => {
+    bgImage >= slides.length - 1 ? setBgImage(0) : setBgImage(bgImage + 1);
   };
+  const prevSlideHandler = () => {
+    bgImage < slides.length - 1
+      ? setBgImage(slides.length - 1)
+      : setBgImage(bgImage - 1);
+  };
+
+  const nextMobileSlideHandle = () => {
+    bgMobile >= mobileSlides.length - 1
+      ? setBgMobile(0)
+      : setBgMobile(bgMobile + 1);
+  };
+  const prevMobileSlideHandle = () => {
+    bgMobile < mobileSlides.length - 1
+      ? setBgMobile(mobileSlides.length - 1)
+      : setBgMobile(bgMobile - 1);
+  };
+  useEffect(() => {}, []);
   return (
     <>
       <div
         className="hidden lg:block bg-no-repeat lg:h-screen relative"
         style={{
-          backgroundImage: `url(${`/${bgImage}`})`,
+          backgroundImage: `url(${`/${slides[bgImage]}`})`,
           backgroundSize: "100%",
           transition: "background-image 0.3s linear",
           WebkitTransition: "background-image 0.3s linear",
@@ -42,7 +65,7 @@ const Slider = () => {
             aria-label="Previous Slider"
             className=" w-9 lg:w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
             onClick={() => {
-              bgImageHandler();
+              prevSlideHandler();
             }}
           >
             <Image
@@ -56,7 +79,7 @@ const Slider = () => {
             aria-label="Next Slider"
             className=" w-9 lg:w-12 btn btn-primary p-3 bg-white border-none rounded-none"
             onClick={() => {
-              bgImageHandler();
+              nextSlideHandler();
             }}
           >
             <Image
@@ -121,9 +144,9 @@ const Slider = () => {
       </div>
       <div className=" lg:hidden">
         <div
-          className="h-[500px] bg-no-repeat"
+          className="h-[500px] bg-no-repeat relative"
           style={{
-            backgroundImage: `url(${`/mobilecover.webp`})`,
+            backgroundImage: `url(${`/${mobileSlides[bgMobile]}`})`,
             backgroundSize: "100%",
             transition: "background-image 0.3s linear",
             WebkitTransition: "background-image 0.3s linear",
@@ -145,6 +168,36 @@ const Slider = () => {
                 alt="Shop Now"
               />
               <p className=" text-white font-medium">SHOP NOW</p>
+            </button>
+          </div>
+          <div className=" absolute bottom-14 right-10">
+            <button
+              aria-label="Previous Slider"
+              className=" w-9 lg:w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
+              onClick={() => {
+                prevMobileSlideHandle();
+              }}
+            >
+              <Image
+                src="/leftarrow.webp"
+                width={100}
+                height={87}
+                alt="Back button"
+              />
+            </button>
+            <button
+              aria-label="Next Slider"
+              className=" w-9 lg:w-12 btn btn-primary p-3 bg-white border-none rounded-none"
+              onClick={() => {
+                nextMobileSlideHandle();
+              }}
+            >
+              <Image
+                src="/rightarrow.webp"
+                width={100}
+                height={87}
+                alt="Next button"
+              />
             </button>
           </div>
         </div>

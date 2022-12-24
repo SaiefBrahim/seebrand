@@ -10,8 +10,8 @@ const Header = ({ bgColor, pos }) => {
   const [connected, setConnected] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   const ref = useRef();
+  const router = useRouter();
   const handleSideBar = () => {
-    const router = useRouter;
     setShowSidebar(!showSidebar);
     showSidebar
       ? (document.body.style.overflow = "visible")
@@ -44,12 +44,12 @@ const Header = ({ bgColor, pos }) => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, []);
   useEffect(() => {
     if (toggleSearch) {
       ref.current.focus();
     }
-  });
+  }, [toggleSearch]);
   return (
     <>
       {/* desktop view */}
@@ -607,8 +607,8 @@ const Header = ({ bgColor, pos }) => {
       {/* mobile header */}
       <div className="lg:hidden fixed top-0 w-full z-50">
         <div className="w-full navbar bg-white">
-          <div className=" mx-2 px-2 normal-case font-medium text-xl ">
-            SeeBrand
+          <div className=" mx-2 px-2 normal-case font-medium text-xl btn btn-ghost hover:bg-white ">
+            <Link href="/">SeeBrand</Link>
           </div>
           <div className="navbar-end w-full relative">
             <button
@@ -636,9 +636,7 @@ const Header = ({ bgColor, pos }) => {
               </svg>
             </button>
             <div
-              className={`${
-                toggleSearch ? "visible" : "invisible"
-              } ease-in-out duration-150 absolute w-screen top-[3.5rem] -right-2`}
+              className={`transition-all ease-in-out duration-150 absolute w-screen top-[3.5rem] -right-2`}
             >
               <input
                 ref={ref}
@@ -647,7 +645,6 @@ const Header = ({ bgColor, pos }) => {
                 className={`${
                   toggleSearch ? "visible" : "invisible"
                 } input bg border-0 focus:outline-0 rounded-none w-full`}
-                autoFocus
               />
             </div>
             <div className="flex-none">
@@ -698,7 +695,7 @@ const Header = ({ bgColor, pos }) => {
             <>
               {showSidebar ? (
                 <div
-                  className=" btn btn-ghost z-50 flex gap-4 items-center -mr-2 -mt-4 pb-9 pt-7 pl-8"
+                  className=" btn btn-ghost z-50 flex gap-2 items-center -mr-2"
                   onClick={() => handleSideBar()}
                 >
                   <h1 className=" font-semibold">Close Menus</h1>
@@ -741,25 +738,24 @@ const Header = ({ bgColor, pos }) => {
                 </label>
               )}
               <div
-                className={` top-0 right-0 w-full overflow-auto pt-16 bg-white text-black fixed h-full z-40 ease-in-out transition-all duration-150 ${
+                className={` top-0 right-0 w-full overflow-auto pt-16 bg-white text-black fixed h-full z-40 ease-in-out transition-all duration-300 ${
                   showSidebar ? "translate-x-0 " : "translate-x-full"
                 }`}
               >
                 <div className="menu w-screen max-w-none text-lg anchor-style">
-                  <Link
-                    href="/"
-                    onClick={() => {
-                      router.push("/");
-                    }}
-                  >
+                  <Link href="/" onClick={() => handleSideBar()}>
                     Home
                   </Link>
                   <Link href="#">Men</Link>
                   <Link href="#">Women</Link>
                   <Link href="#">Kid</Link>
                   <Link href="#">Wishlist</Link>
-                  <Link href="#">Signup</Link>
-                  <Link href="#">Login</Link>
+                  <Link href="/signup" onClick={() => handleSideBar()}>
+                    Signup
+                  </Link>
+                  <Link href="/login" onClick={() => handleSideBar()}>
+                    Login
+                  </Link>
                 </div>
               </div>
             </>
