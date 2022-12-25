@@ -8,6 +8,9 @@ import dummy9 from "../../public/dummydata/dummy9.webp";
 import dummy10 from "../../public/dummydata/dummy10.webp";
 import dummy3 from "../../public/dummydata/dummy3.webp";
 import dummy6 from "../../public/dummydata/dummy6.webp";
+import rightArrow from "../../public/rightarrow.webp";
+import leftArrow from "../../public/leftarrow2.webp";
+
 import Link from "next/link";
 
 const ProductsSlider = () => {
@@ -18,12 +21,7 @@ const ProductsSlider = () => {
         className=" w-10 btn btn-primary p-3 border-none bg-transparent bg-opacity-20 h-10  rounded-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -right-[50px] lg:-right-16"
         onClick={onClick}
       >
-        <Image
-          src="/rightarrow.webp"
-          width={100}
-          height={87}
-          alt="Next button"
-        />
+        <Image src={rightArrow} alt="Next button" />
       </button>
     );
   };
@@ -35,12 +33,7 @@ const ProductsSlider = () => {
         className=" w-10 btn btn-primary bg-transparent h-10 bg-opacity-20 rounded-none p-3 border-none absolute top-[50%] min-h-0 min-w-0 cursor-pointer -left-[50px] lg:-left-16"
         onClick={onClick}
       >
-        <Image
-          src="/leftarrow2.webp"
-          width={100}
-          height={87}
-          alt="Back button"
-        />
+        <Image src={leftArrow} width={100} height={87} alt="Back button" />
       </button>
     );
   };
