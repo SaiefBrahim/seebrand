@@ -5,7 +5,7 @@ const Slider = () => {
   const [bgImage, setBgImage] = useState(0);
   const [bgMobile, setBgMobile] = useState(0);
 
-  const slides = ["coverpic.webp", "coverpic2.webp"];
+  const slides = ["coverpic1.webp", "coverpic2.webp", "coverpic3.webp"];
   const mobileSlides = [
     "mobileslide1.webp",
     "mobileslide2.webp",
@@ -15,9 +15,7 @@ const Slider = () => {
     bgImage >= slides.length - 1 ? setBgImage(0) : setBgImage(bgImage + 1);
   };
   const prevSlideHandler = () => {
-    bgImage < slides.length - 1
-      ? setBgImage(slides.length - 1)
-      : setBgImage(bgImage - 1);
+    bgImage <= 0 ? setBgImage(slides.length - 1) : setBgImage(bgImage - 1);
   };
 
   const nextMobileSlideHandle = () => {
@@ -26,11 +24,19 @@ const Slider = () => {
       : setBgMobile(bgMobile + 1);
   };
   const prevMobileSlideHandle = () => {
-    bgMobile < mobileSlides.length - 1
+    bgMobile <= 0
       ? setBgMobile(mobileSlides.length - 1)
       : setBgMobile(bgMobile - 1);
   };
-  useEffect(() => {}, []);
+  useEffect(() => {
+    var i = 0;
+    const sliderHandler = setInterval(() => {
+      nextSlideHandler();
+      nextMobileSlideHandle();
+    }, 4000);
+    return () => clearInterval(sliderHandler);
+  }, [bgImage, bgMobile]);
+
   return (
     <>
       <div
@@ -42,8 +48,8 @@ const Slider = () => {
           WebkitTransition: "background-image 0.3s linear",
         }}
       >
-        <div className="h-32 lg:h-fit flex flex-col ml-[21%] gap-4 lg:mt-0 lg:gap-8 ">
-          <p className=" cursor-default text-white mt-[2%] lg:mt-[12%] w-56 text-lg lg:w-72 lg:leading-snug md:text-2xl lg:text-[3.5rem] font-bold">
+        <div className="absolute flex flex-col left-[14%] top-[20%] gap-8 ">
+          <p className=" cursor-default text-white w-60 leading-snug text-5xl font-bold">
             Sale of the summer collection
           </p>
           <button
@@ -51,7 +57,7 @@ const Slider = () => {
             className=" flex items-center gap-3 cursor-pointer w-fit"
           >
             <Image
-              className=" w-6 lg:w-10"
+              className=" w-10"
               src="/shopnowbutton.webp"
               width={156}
               height={156}
@@ -60,10 +66,10 @@ const Slider = () => {
             <p className=" text-white font-medium text-base">SHOP NOW</p>
           </button>
         </div>
-        <div className=" lg:flex justify-end top-36 right-10 static mt-32 mr-24">
+        <div className=" absolute flex justify-end right-20 bottom-14">
           <button
             aria-label="Previous Slider"
-            className=" w-9 lg:w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
+            className=" w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
             onClick={() => {
               prevSlideHandler();
             }}
@@ -90,9 +96,9 @@ const Slider = () => {
             />
           </button>
         </div>
-        <div className=" hidden lg:flex mt-6 py-6 lg:py-0 lg:mt-0 lg:justify-around lg:w-[70%] lg:rounded-tr-full lg:h-[18%] lg:absolute lg:top-[82vh] bg-white">
-          <div className=" flex flex-col gap-6 lg:flex-row items-center w-full">
-            <div className=" lg:ml-12 flex gap-4">
+        <div className="flex justify-around w-[70%] rounded-tr-full h-[18%] absolute bottom-0 bg-white">
+          <div className=" flex gap-6 items-center justify-center w-full">
+            <div className="flex gap-4">
               <Image
                 className=" w-12 h-12"
                 src="/freeshipping.webp"
@@ -122,7 +128,7 @@ const Slider = () => {
                 </p>
               </div>
             </div>
-            <div className=" lg:mr-12 flex gap-4">
+            <div className="flex gap-4">
               <Image
                 className=" w-12 h-12"
                 src="/moneybackwarranty.webp"
@@ -142,6 +148,9 @@ const Slider = () => {
           </div>
         </div>
       </div>
+
+      {/* mobile slider */}
+
       <div className=" lg:hidden">
         <div
           className="h-[500px] bg-no-repeat relative"

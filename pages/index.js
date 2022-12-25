@@ -13,11 +13,10 @@ const Home = () => {
         <title>SeeBrand - Get Fashionated</title>
         <meta name="description" content="Home Page" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" href="/mobileslide1.webp" as="image" />
         <link rel="preload" href="/mobileslide2.webp" as="image" />
         <link rel="preload" href="/mobileslide3.webp" as="image" />
-        <link rel="preload" href="/coverpic.webp" as="image" />
         <link rel="preload" href="/coverpic2.webp" as="image" />
+        <link rel="preload" href="/coverpic3.webp" as="image" />
       </Head>
       <div>
         <Slider />

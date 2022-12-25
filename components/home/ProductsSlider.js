@@ -2,6 +2,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import dummy1 from "../../public/dummydata/dummy1.webp";
+import dummy2 from "../../public/dummydata/dummy2.webp";
+import dummy9 from "../../public/dummydata/dummy9.webp";
+import dummy10 from "../../public/dummydata/dummy10.webp";
+import dummy3 from "../../public/dummydata/dummy3.webp";
+import dummy6 from "../../public/dummydata/dummy6.webp";
+import Link from "next/link";
 
 const ProductsSlider = () => {
   const NArrow = ({ onClick }) => {
@@ -92,104 +99,78 @@ const ProductsSlider = () => {
         </button>
       </div>
       <Slider className=" mx-5 lg:-mx-5" {...settings}>
-        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
+        <Link
+          href="#"
+          className="card card-compact border border-gray-300 lg:border-none rounded-none"
+        >
           <figure>
-            <Image
-              src="/announcements/announcement3.webp"
-              alt="New Arrivals"
-              width={608}
-              height={373}
-            />
+            <Image src={dummy1} alt="Fancy Blazzers" />
           </figure>
           <div className="card-body px-1">
-            <p className="">Pull Summer 2022</p>
-            <h2 className="card-title">89 TND</h2>
+            <p>Fancy Blazzers</p>
+            <h2 className="card-title">99 TND</h2>
           </div>
-        </div>
-        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
+        </Link>
+        <Link
+          href="#"
+          className="card card-compact border border-gray-300 lg:border-none rounded-none"
+        >
           <figure>
-            <Image
-              src="/announcements/announcement3.webp"
-              alt="New Arrivals"
-              width={608}
-              height={373}
-            />
+            <Image src={dummy2} alt="Stripped Jean Jacket" />
           </figure>
           <div className="card-body px-1">
-            <p className="">Pull Summer 2022</p>
-            <h2 className="card-title">89 TND</h2>
+            <p>Stripped Jean Jacket</p>
+            <h2 className="card-title">229 TND</h2>
           </div>
-        </div>
-        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
+        </Link>
+        <Link
+          href="#"
+          className="card card-compact border border-gray-300 lg:border-none rounded-none"
+        >
           <figure>
-            <Image
-              src="/announcements/announcement3.webp"
-              alt="New Arrivals"
-              width={608}
-              height={373}
-            />
+            <Image src={dummy9} alt="Pink Crossed Jacket" />
           </figure>
           <div className="card-body px-1">
-            <p className="">Pull Summer 2022</p>
-            <h2 className="card-title">89 TND</h2>
+            <p>Pink Crossed Jacket</p>
+            <h2 className="card-title">240 TND</h2>
           </div>
-        </div>
-        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
+        </Link>
+        <Link
+          href="#"
+          className="card card-compact border border-gray-300 lg:border-none rounded-none"
+        >
           <figure>
-            <Image
-              src="/announcements/announcement3.webp"
-              alt="New Arrivals"
-              width={608}
-              height={373}
-            />
+            <Image src={dummy10} alt="Class B Pants" />
           </figure>
           <div className="card-body px-1">
-            <p className="">Pull Summer 2022</p>
-            <h2 className="card-title">89 TND</h2>
+            <p>Class B Pants</p>
+            <h2 className="card-title">109 TND</h2>
           </div>
-        </div>
-        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
+        </Link>
+        <Link
+          href="#"
+          className="card card-compact border border-gray-300 lg:border-none rounded-none"
+        >
           <figure>
-            <Image
-              src="/announcements/announcement3.webp"
-              alt="New Arrivals"
-              width={608}
-              height={373}
-            />
+            <Image src={dummy3} alt="Casual White Shirt" />
           </figure>
           <div className="card-body px-1">
-            <p className="">Pull Summer 2022</p>
-            <h2 className="card-title">89 TND</h2>
+            <p>Casual White Shirt</p>
+            <h2 className="card-title">79 TND</h2>
           </div>
-        </div>
-        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
+        </Link>
+        <Link
+          href="#"
+          className="card card-compact border border-gray-300 lg:border-none rounded-none"
+        >
           <figure>
-            <Image
-              src="/announcements/announcement3.webp"
-              alt="New Arrivals"
-              width={608}
-              height={373}
-            />
+            <Image src={dummy6} alt="Pinky SweatShirt" />
           </figure>
           <div className="card-body px-1">
-            <p className="">Pull Summer 2022</p>
-            <h2 className="card-title">89 TND</h2>
+            <p>Pinky SweatShirt</p>
+            <h2 className="card-title">102 TND</h2>
           </div>
-        </div>
-        <div className="card card-compact border border-gray-300 lg:border-none rounded-none">
-          <figure>
-            <Image
-              src="/announcements/announcement3.webp"
-              alt="New Arrivals"
-              width={608}
-              height={373}
-            />
-          </figure>
-          <div className="card-body px-1">
-            <p className="">Pull Summer 2022</p>
-            <h2 className="card-title">89 TND</h2>
-          </div>
-        </div>
+        </Link>
       </Slider>
     </div>
   );
