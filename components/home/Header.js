@@ -83,122 +83,66 @@ const Header = ({ bgColor, pos }) => {
               </Link>
 
               <ul
-                className={` ${toggle1} megamenumen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-full absolute top-[100%] p-16 megamenu left-0`}
+                className={` ${toggle1} megamenumen grid transition-all duration-[200ms] ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-full absolute top-[100%] p-16 megamenu left-0`}
               >
-                <ul className=" font-medium flex flex-col gap-6">
-                  <li>
-                    <Link href="#">Sale</Link>
-                  </li>
-                  <li>
-                    <Link href="#">BestSellers</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Latest Arrivals</Link>
-                  </li>
-                </ul>
+                <div className=" font-medium flex flex-col gap-6 list-hover">
+                  <Link href="#">Sale</Link>
+                  <Link href="#">BestSellers</Link>
+                  <Link href="#">Latest Arrivals</Link>
+                </div>
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     CLOTHING
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Jeans</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Sweetshirts and Hoodies</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Tracksuit</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jacket and Coats</Link>
-                    </li>
-                    <li>
-                      <Link href="#">T-shirts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Shorts</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Jeans</Link>
+                    <Link href="#">Sweetshirts and Hoodies</Link>
+                    <Link href="#">Tracksuit</Link>
+                    <Link href="#">Jacket and Coats</Link>
+                    <Link href="#">T-shirts</Link>
+                    <Link href="#">Shorts</Link>
+                  </div>
                 </li>
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     SHOES
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link className="" href="#">
-                        Casual
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#">Freestyle</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Running</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hiking</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Boots</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Trainers</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Casual</Link>
+                    <Link href="#">Freestyle</Link>
+                    <Link href="#">Running</Link>
+                    <Link href="#">Hiking</Link>
+                    <Link href="#">Boots</Link>
+                    <Link href="#">Trainers</Link>
+                  </div>
                 </li>
 
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     ACCESSORIES
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Caps</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jewellery</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Bags</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hats</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Belts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Socks</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Caps</Link>
+                    <Link href="#">Jewellery</Link>
+                    <Link href="#">Bags</Link>
+                    <Link href="#">Hats</Link>
+                    <Link href="#">Belts</Link>
+                    <Link href="#">Socks</Link>
+                  </div>
                 </li>
 
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     SALE
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Caps</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jewellery</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Bags</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hats</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Belts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Socks</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Caps</Link>
+                    <Link href="#">Jewellery</Link>
+                    <Link href="#">Bags</Link>
+                    <Link href="#">Hats</Link>
+                    <Link href="#">Belts</Link>
+                    <Link href="#">Socks</Link>
+                  </div>
                 </li>
               </ul>
             </li>
@@ -217,118 +161,64 @@ const Header = ({ bgColor, pos }) => {
               <ul
                 className={` ${toggle2} megamenuwomen grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-full absolute megamenu top-[100%] p-16 left-0  `}
               >
-                <ul className=" font-medium flex flex-col gap-6">
-                  <li>
-                    <Link href="#">Sale</Link>
-                  </li>
-                  <li>
-                    <Link href="#">BestSellers</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Latest Arrivals</Link>
-                  </li>
-                </ul>
+                <div className=" font-medium flex flex-col gap-6 list-hover">
+                  <Link href="#">Sale</Link>
+                  <Link href="#">BestSellers</Link>
+                  <Link href="#">Latest Arrivals</Link>
+                </div>
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     CLOTHING
                   </Link>
-                  <ul className="font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Trousers</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jeans</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Sweetshirts and Hoodies</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jackets</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Blazers</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Tops & Bodysuits</Link>
-                    </li>
-                  </ul>
+                  <div className="font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Trousers</Link>
+                    <Link href="#">Jeans</Link>
+                    <Link href="#">Sweetshirts and Hoodies</Link>
+                    <Link href="#">Jackets</Link>
+                    <Link href="#">Blazers</Link>
+                    <Link href="#">Tops & Bodysuits</Link>
+                  </div>
                 </li>
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     SHOES
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Casual</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Freestyle</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Running</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hiking</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Boots</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Trainers</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Casual</Link>
+                    <Link href="#">Freestyle</Link>
+                    <Link href="#">Running</Link>
+                    <Link href="#">Hiking</Link>
+                    <Link href="#">Boots</Link>
+                    <Link href="#">Trainers</Link>
+                  </div>
                 </li>
 
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     ACCESSORIES
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Caps</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jewellery</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Bags</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hats</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Belts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Socks</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Caps</Link>
+                    <Link href="#">Jewellery</Link>
+                    <Link href="#">Bags</Link>
+                    <Link href="#">Hats</Link>
+                    <Link href="#">Belts</Link>
+                    <Link href="#">Socks</Link>
+                  </div>
                 </li>
 
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     SALE
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Caps</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jewellery</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Bags</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hats</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Belts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Socks</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Caps</Link>
+                    <Link href="#">Jewellery</Link>
+                    <Link href="#">Bags</Link>
+                    <Link href="#">Hats</Link>
+                    <Link href="#">Belts</Link>
+                    <Link href="#">Socks</Link>
+                  </div>
                 </li>
               </ul>
             </li>
@@ -346,118 +236,64 @@ const Header = ({ bgColor, pos }) => {
               <ul
                 className={` ${toggle3} megamenukid grid transition-all duration-300 ease-in-out bg-gray-50 text-black grid-cols-5 justify-items-center items-center w-full absolute megamenu top-[100%] p-16 left-0  `}
               >
-                <ul className=" font-medium flex flex-col gap-6">
-                  <li>
-                    <Link href="#">Sale</Link>
-                  </li>
-                  <li>
-                    <Link href="#">BestSellers</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Latest Arrivals</Link>
-                  </li>
-                </ul>
+                <div className=" font-medium flex flex-col gap-6 list-hover">
+                  <Link href="#">Sale</Link>
+                  <Link href="#">BestSellers</Link>
+                  <Link href="#">Latest Arrivals</Link>
+                </div>
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     CLOTHING
                   </Link>
-                  <ul className="font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Trousers</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jeans</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Sweetshirts and Hoodies</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jackets</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Blazers</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Tops & Bodysuits</Link>
-                    </li>
-                  </ul>
+                  <div className="font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Trousers</Link>
+                    <Link href="#">Jeans</Link>
+                    <Link href="#">Sweetshirts and Hoodies</Link>
+                    <Link href="#">Jackets</Link>
+                    <Link href="#">Blazers</Link>
+                    <Link href="#">Tops & Bodysuits</Link>
+                  </div>
                 </li>
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     SHOES
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Casual</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Freestyle</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Running</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hiking</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Boots</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Trainers</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Casual</Link>
+                    <Link href="#">Freestyle</Link>
+                    <Link href="#">Running</Link>
+                    <Link href="#">Hiking</Link>
+                    <Link href="#">Boots</Link>
+                    <Link href="#">Trainers</Link>
+                  </div>
                 </li>
 
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     ACCESSORIES
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Caps</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jewellery</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Bags</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hats</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Belts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Socks</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Caps</Link>
+                    <Link href="#">Jewellery</Link>
+                    <Link href="#">Bags</Link>
+                    <Link href="#">Hats</Link>
+                    <Link href="#">Belts</Link>
+                    <Link href="#">Socks</Link>
+                  </div>
                 </li>
 
                 <li className=" flex flex-col gap-6">
-                  <Link className=" font-medium" href="#">
+                  <Link className=" font-medium link-hover" href="#">
                     SALE
                   </Link>
-                  <ul className=" font-medium text-gray-600 flex flex-col gap-2">
-                    <li>
-                      <Link href="#">Caps</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Jewellery</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Bags</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Hats</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Belts</Link>
-                    </li>
-                    <li>
-                      <Link href="#">Socks</Link>
-                    </li>
-                  </ul>
+                  <div className=" font-medium text-gray-600 flex flex-col gap-2 list-hover">
+                    <Link href="#">Caps</Link>
+                    <Link href="#">Jewellery</Link>
+                    <Link href="#">Bags</Link>
+                    <Link href="#">Hats</Link>
+                    <Link href="#">Belts</Link>
+                    <Link href="#">Socks</Link>
+                  </div>
                 </li>
               </ul>
             </li>

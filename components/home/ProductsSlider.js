@@ -43,8 +43,6 @@ const ProductsSlider = () => {
     speed: 250,
     nextArrow: <NArrow />,
     prevArrow: <PArrow />,
-    slidesToShow: 4,
-    slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 4000,
@@ -54,7 +52,7 @@ const ProductsSlider = () => {
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 3840,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,

@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Announcements = () => {
   return (
-    <div className=" hidden lg:flex gap-8 flex-col lg:flex-row ">
+    <div className=" hidden lg:flex justify-center gap-8 ">
       <div className=" relative">
         <Image
           src="/announcements/announcement1.webp"
