@@ -35,7 +35,7 @@ const Slider = () => {
       nextMobileSlideHandle();
     }, 4000);
     return () => clearInterval(sliderHandler);
-  }, [bgImage, bgMobile]);
+  }, [bgImage, bgMobile, nextSlideHandler, nextMobileSlideHandle]);
 
   return (
     <>
