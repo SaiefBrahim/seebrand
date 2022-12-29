@@ -40,7 +40,7 @@ const Slider = () => {
   return (
     <>
       <div
-        className="hidden lg:block bg-no-repeat lg:h-screen relative"
+        className="hidden lg:block bg-no-repeat h-[800px] relative"
         style={{
           backgroundImage: `url(${`/${slides[bgImage]}`})`,
           backgroundSize: "100%",
