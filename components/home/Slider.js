@@ -40,15 +40,16 @@ const Slider = () => {
   return (
     <>
       <div
-        className="hidden lg:block bg-no-repeat h-[800px] relative"
+        className="hidden lg:block bg-no-repeat h-screen relative"
         style={{
           backgroundImage: `url(${`/${slides[bgImage]}`})`,
           backgroundSize: "100%",
+          objectFit: "cover",
           transition: "background-image 0.3s linear",
           WebkitTransition: "background-image 0.3s linear",
         }}
       >
-        <div className="absolute flex flex-col left-[14%] top-[20%] gap-8 ">
+        <div className="absolute flex flex-col top-[20%] left-[16%] gap-8 ">
           <p className=" cursor-default text-white w-60 leading-snug text-5xl font-bold">
             Sale of the summer collection
           </p>
@@ -66,7 +67,7 @@ const Slider = () => {
             <p className=" text-white font-medium text-base">SHOP NOW</p>
           </button>
         </div>
-        <div className=" absolute flex justify-end right-20 bottom-14">
+        <div className=" absolute flex justify-end right-20 bottom-10">
           <button
             aria-label="Previous Slider"
             className=" w-12 btn btn-primary p-3 bg-gray-700 border-none bg-opacity-20 rounded-none"
@@ -96,7 +97,7 @@ const Slider = () => {
             />
           </button>
         </div>
-        <div className="flex justify-around w-[70%] rounded-tr-full h-[18%] absolute bottom-0 bg-white">
+        <div className="flex justify-around w-[70%] rounded-tr-full absolute bottom-0 left-0 p-7 bg-white">
           <div className=" flex gap-6 items-center justify-center w-full">
             <div className="flex gap-4">
               <Image
