@@ -10,6 +10,9 @@ import mobileSlide3 from "../../public/mobileslide3.webp";
 import shopNowButton from "../../public/shopnowbutton.webp";
 import rightArrow from "../../public/rightarrow.webp";
 import leftArrow from "../../public/leftarrow.webp";
+import freeShipping from "../../public/freeshipping.webp";
+import satisfiedCustomer from "../../public/satisfiedcustomers.webp";
+import moneyBackWarranty from "../../public/moneybackwarranty.webp";
 
 const Slider = () => {
   const [bgImage, setBgImage] = useState(0);
@@ -46,10 +49,10 @@ const Slider = () => {
     <>
       <div className="hidden lg:block relative">
         <Image
-          className=" transition-all duration-300 ease-linear pointer-events-none"
+          className="pointer-events-none"
           src={slides[bgImage]}
           alt="Slide Show Images"
-          loading="eager"
+          loading="lazy"
         />
         <div className="absolute top-[20%] left-[16%] flex flex-col gap-8">
           <p className=" cursor-default text-white w-60 leading-snug text-5xl font-bold">
@@ -58,12 +61,14 @@ const Slider = () => {
           <Link href="#">
             <button
               aria-label="Shop Now"
-              className="flex items-center gap-3 hover:-translate-y-1 hover:scale-110 transition-all duration-300 ease-linear delay-75"
+              className="flex items-center gap-3 hover:scale-105 hover:translate-x-1 duration-150 ease-linear"
             >
               <Image
                 className=" w-10 h-10 pointer-events-none"
                 src={shopNowButton}
                 alt="Shop Now"
+                loading="lazy"
+                quality={100}
               />
               <p className="text-white font-medium">SHOP NOW</p>
             </button>
@@ -77,7 +82,7 @@ const Slider = () => {
               prevSlideHandler();
             }}
           >
-            <Image src={leftArrow} alt="Back button" />
+            <Image src={leftArrow} alt="Back button" loading="lazy" />
           </button>
           <button
             aria-label="Next Slider"
@@ -86,7 +91,7 @@ const Slider = () => {
               nextSlideHandler();
             }}
           >
-            <Image src={rightArrow} alt="Next button" />
+            <Image src={rightArrow} alt="Next button" loading="lazy" />
           </button>
         </div>
         <div className="flex justify-around w-[70%] rounded-tr-full absolute bottom-0 left-0 p-7 bg-white">
@@ -94,10 +99,9 @@ const Slider = () => {
             <div className="flex gap-4">
               <Image
                 className=" w-12 h-12"
-                src="/freeshipping.webp"
+                src={freeShipping}
                 alt="Free Shipping"
-                width={156}
-                height={156}
+                loading="lazy"
               />
               <div>
                 <h1 className=" font-medium text-sm">Free Shipping</h1>
@@ -109,10 +113,9 @@ const Slider = () => {
             <div className=" flex gap-4">
               <Image
                 className=" w-12 h-12"
-                src="/satisfiedcustomers.webp"
+                src={satisfiedCustomer}
                 alt="99% Satisfied Customers"
-                width={156}
-                height={156}
+                loading="lazy"
               />
               <div>
                 <h1 className=" font-medium text-sm">Originality Guaranteed</h1>
@@ -124,10 +127,9 @@ const Slider = () => {
             <div className="flex gap-4">
               <Image
                 className=" w-12 h-12"
-                src="/moneybackwarranty.webp"
+                src={moneyBackWarranty}
                 alt="Money Back Warranty"
-                width={156}
-                height={156}
+                loading="lazy"
               />
               <div>
                 <h1 className=" font-medium text-sm">
@@ -150,7 +152,7 @@ const Slider = () => {
             className=" transition-all ease-linear duration-1000 pointer-events-none"
             src={mobileSlides[bgMobile]}
             alt="Slide Show Images"
-            loading="eager"
+            loading="lazy"
           />
           <div className="absolute bottom-14 left-8 flex flex-col gap-6">
             <p className=" cursor-default text-white w-56 text-4xl font-bold">
@@ -161,7 +163,12 @@ const Slider = () => {
                 aria-label="Shop Now"
                 className=" flex items-center gap-3 pointer-events-none"
               >
-                <Image className=" w-9" src={shopNowButton} alt="Shop Now" />
+                <Image
+                  className=" w-9"
+                  src={shopNowButton}
+                  alt="Shop Now"
+                  loading="lazy"
+                />
                 <p className=" text-white font-medium">SHOP NOW</p>
               </button>
             </Link>
@@ -174,7 +181,7 @@ const Slider = () => {
                 prevMobileSlideHandle();
               }}
             >
-              <Image src={leftArrow} alt="Back button" />
+              <Image src={leftArrow} alt="Back button" loading="lazy" />
             </button>
             <button
               aria-label="Next Slider"
@@ -183,7 +190,7 @@ const Slider = () => {
                 nextMobileSlideHandle();
               }}
             >
-              <Image src={rightArrow} alt="Next button" />
+              <Image src={rightArrow} alt="Next button" loading="lazy" />
             </button>
           </div>
         </div>

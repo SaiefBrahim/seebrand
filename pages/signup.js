@@ -174,7 +174,7 @@ const Signup = () => {
               </div>
               <div className="form-control">
                 <select
-                  className="input input-bordered bg-white rounded-3x"
+                  className="input input-bordered roun bg-white rounded-3xl"
                   defaultValue={"Gender"}
                 >
                   <option disabled>Gender</option>
