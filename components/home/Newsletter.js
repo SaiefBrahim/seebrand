@@ -1,7 +1,7 @@
 const Newsletter = () => {
   return (
     <div
-      className=" flex flex-col lg:flex-row bg-no-repeat h-60 justify-center bg-right-bottom bg-cover items-center gap-6 mt-12"
+      className=" flex flex-col lg:flex-row bg-no-repeat h-56 justify-center bg-right-bottom items-center gap-6 mt-12"
       style={{ backgroundImage: `url("/newsletterbg.webp")` }}
     >
       <div className=" lg:w-[50%] flex justify-center text-center lg:text-left">
