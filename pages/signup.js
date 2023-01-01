@@ -1,8 +1,23 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
+import { useFormik } from "formik";
+import Yup from "yup";
 const Signup = () => {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
+  const fomik = useFormik({
+    initialValues: {
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+      gender: "",
+      country: "",
+      city: "",
+      road: "",
+      phone: "",
+    },
+  });
 
   return (
     <>
@@ -174,13 +189,55 @@ const Signup = () => {
               </div>
               <div className="form-control">
                 <select
-                  className="input input-bordered roun bg-white rounded-3xl"
+                  className="select select-bordered bg-white rounded-3xl"
                   defaultValue={"Gender"}
                 >
                   <option disabled>Gender</option>
                   <option>Male</option>
                   <option>Female</option>
                 </select>
+              </div>
+              <div className="form-control">
+                <select
+                  className="select select-bordered bg-white rounded-3xl"
+                  defaultValue={"Country"}
+                >
+                  <option disabled>Country</option>
+                  <option>Tunisia</option>
+                  <option>Algeria</option>
+                  <option>Egypt</option>
+                  <option>Morocco</option>
+                </select>
+              </div>
+              <div className="form-control">
+                <select
+                  className="select select-bordered bg-white rounded-3xl"
+                  defaultValue={"Gender"}
+                >
+                  <option disabled>Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div className="form-control">
+                <select
+                  className="select select-bordered bg-white rounded-3xl"
+                  defaultValue={"Gender"}
+                >
+                  <option disabled>Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div className="form-control">
+                <label className="input-group">
+                  <span>+216</span>
+                  <input
+                    type="number"
+                    placeholder="Phone Number"
+                    className="input input-bordered border-gray-400 bg-white w-full"
+                  />
+                </label>
               </div>
             </div>
             <div className=" flex justify-between">
@@ -194,7 +251,7 @@ const Signup = () => {
                     I agree to the Seebrand{" "}
                     <Link href="#" className=" link">
                       Terms of Service
-                    </Link>
+                    </Link>{" "}
                     and{" "}
                     <Link href="#" className=" link">
                       Privacy Policy

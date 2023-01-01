@@ -9,53 +9,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+/* product slider styling */
 @media (min-width: 760px) {
   .slick-slide > div {
     margin: 0 20px;
   }
 }
-.megamenu::before {
-  content: "";
-  position: absolute;
-  border: solid transparent;
-  width: 100%;
-  border-width: 20px;
-  top: -3.5%;
-  z-index: 1;
-}
-.megamenumen::after {
-  content: "";
-  position: absolute;
-  border: solid transparent;
-  width: 2.6%;
-  border-width: 2px;
-  border-color: orange;
-  top: -4.5%;
-  left: 43.5%;
-  z-index: 10;
-}
-.megamenuwomen::after {
-  content: "";
-  position: absolute;
-  border: solid transparent;
-  width: 4%;
-  border-width: 2px;
-  border-color: orange;
-  top: -4.5%;
-  left: 48.4%;
-  z-index: 10;
-}
-.megamenukid::after {
-  content: "";
-  position: absolute;
-  border: solid transparent;
-  width: 2%;
-  border-width: 2px;
-  border-color: orange;
-  top: -4.5%;
-  left: 54.6%;
-  z-index: 10;
-}
+/* end product slider styling */
+
 /* search bar */
 .Hotbg {
   transform: translate(-0.01%, 0%);
@@ -102,6 +63,51 @@ body {
   width: 0px;
 }
 /* end search bar */
+
+/* menus styling */
+.megamenu::before {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 100%;
+  border-width: 20px;
+  top: -3.5%;
+  z-index: 1;
+}
+.megamenumen::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 2.6%;
+  border-width: 2px;
+  border-color: orange;
+  top: -4.5%;
+  left: 43.5%;
+  z-index: 10;
+}
+.megamenuwomen::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 4%;
+  border-width: 2px;
+  border-color: orange;
+  top: -4.5%;
+  left: 48.4%;
+  z-index: 10;
+}
+.megamenukid::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+  width: 2%;
+  border-width: 2px;
+  border-color: orange;
+  top: -4.5%;
+  left: 54.6%;
+  z-index: 10;
+}
+
 .anchor-style {
   display: flex;
   flex-direction: column;
@@ -130,3 +136,15 @@ body {
   -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
+/* end menus styling */
+
+/* removing arrows from input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+/* end removing arrows from input number */
